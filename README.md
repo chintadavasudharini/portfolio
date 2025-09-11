@@ -1,7 +1,7 @@
 # Portfolio Project
 
 This repository contains a personal portfolio website and related resources.
-
+https://chintadavasudharini.github.io/portfolio/
 
 View My Portfolio where I Deployed in Vercel website 
 https://portfolio-lime-tau-36.vercel.app/ 
