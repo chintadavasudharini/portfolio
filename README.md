@@ -2,8 +2,8 @@
 
 This repository contains a personal portfolio website and related resources.
 
-View My Portfolio where I Deployed in Vercel website 
 
+View My Portfolio where I Deployed in Vercel website 
 https://portfolio-lime-tau-36.vercel.app/ 
 
 
