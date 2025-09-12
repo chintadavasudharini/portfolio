@@ -1,12 +1,16 @@
 # Portfolio Project
 
 This repository contains a personal portfolio website and related resources.
+https://chintadavasudharini.github.io/portfolio/
+
+View My Portfolio where I Deployed in Vercel website 
+https://portfolio-lime-tau-36.vercel.app/ 
+
 
 ## Structure
 
 - `prtf/` - Python virtual environment directory (contains dependencies and environment files)
-- `templates/` - Contains HTML templates and documents
-  - `portfolio.html` - Main portfolio webpage
+  - `index.html` - Main portfolio webpage
   - `CHINTADA.VASUDHARINI.pdf` - PDF document (likely resume or certificate)
 
 ## Getting Started
@@ -22,11 +26,11 @@ This repository contains a personal portfolio website and related resources.
      pip install -r requirements.txt
      ```
    - (Note: Add a `requirements.txt` if your project needs extra packages.)
-3. **Open `portfolio.html`**
+3. **Open `index.html`**
    - You can view or edit the HTML file in any browser or editor.
 
 ## Customization
-- Update `portfolio.html` to personalize your portfolio content.
+- Update `index.html` to personalize your portfolio content.
 - Add or replace documents in the `templates/` folder as needed.
 
 ## License
