@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { FiExternalLink, FiGithub, FiCloud, FiImage, FiFileText } from 'react-icons/fi';
+import { FiExternalLink, FiGithub, FiCloud, FiImage, FiFileText, FiBook } from 'react-icons/fi';
 
 const projects = [
   {
@@ -57,6 +57,24 @@ const projects = [
     github: 'https://github.com/chintadavasudharini/cloud-storage-manager',
     live: null,
     badge: 'AWS S3',
+  },
+  {
+    title: 'Book Collection Tracker',
+    description:
+      'A Flask-based web application that helps users manage their personal book collections with secure authentication, modern UI, and deployment-ready configurations.',
+    icon: FiBook,
+    gradient: 'from-emerald-500 via-teal-500 to-cyan-500',
+    glow: 'rgba(16,185,129,0.3)',
+    tags: ['Python', 'Flask', 'SQLite', 'Authentication', 'Render', 'Responsive UI'],
+    features: [
+      'Secure User Authentication (Register/Login)',
+      'Complete Book Management (CRUD)',
+      'Quick Search & Filter functionality',
+      'Deployment-ready for Render & Heroku',
+    ],
+    github: 'https://github.com/chintadavasudharini/BookCollectionTracker',
+    live: 'https://book-collection-tracker.onrender.com',
+    badge: 'Full Stack',
   },
 ];
 
