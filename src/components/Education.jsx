@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { FiAward, FiBook, FiMapPin } from 'react-icons/fi';
+import { FaGraduationCap, FaBuildingColumns, FaSchool } from 'react-icons/fa6';
 
 const education = [
   {
@@ -11,7 +12,7 @@ const education = [
     period: '2020 – 2024',
     score: 'CGPA: 8.51',
     scoreLabel: 'CGPA',
-    icon: FiAward,
+    icon: FaGraduationCap,
     color: 'from-purple-500 to-violet-600',
     tags: ['AIML Specialization', 'Data Structures', 'Cloud Computing', 'Full-Stack Dev'],
   },
@@ -22,7 +23,7 @@ const education = [
     period: '2018 – 2020',
     score: 'CGPA: 9.63',
     scoreLabel: 'CGPA',
-    icon: FiBook,
+    icon: FaBuildingColumns,
     color: 'from-cyan-500 to-sky-600',
     tags: ['Mathematics', 'Physics', 'Chemistry'],
   },
@@ -33,7 +34,7 @@ const education = [
     period: '2017 – 2018',
     score: 'CGPA: 8.5',
     scoreLabel: 'CGPA',
-    icon: FiBook,
+    icon: FaSchool,
     color: 'from-pink-500 to-rose-600',
     tags: ['General Science', 'Mathematics', 'Secondary Education'],
   },
