@@ -73,7 +73,7 @@ const projects = [
       'Deployment-ready for Render & Heroku',
     ],
     github: 'https://github.com/chintadavasudharini/BookCollectionTracker',
-    live: 'https://book-collection-tracker.onrender.com',
+    live: null,
     badge: 'Full Stack',
   },
 ];
