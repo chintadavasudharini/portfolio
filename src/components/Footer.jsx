@@ -82,14 +82,8 @@ export default function Footer() {
         {/* Divider */}
         <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mb-6" />
 
-        {/* Bottom row */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-slate-500 text-xs">
+        <div className="flex flex-col items-center justify-center gap-3 text-slate-500 text-xs text-center">
           <p>© {year} Chintada Vasudharini. All rights reserved.</p>
-          <p className="flex items-center gap-1.5">
-            Built with
-            <FiHeart size={11} className="text-pink-500 animate-pulse" />
-            using React · Vite · Tailwind · Framer Motion
-          </p>
         </div>
       </div>
     </footer>

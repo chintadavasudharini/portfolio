@@ -81,8 +81,8 @@ export default function About() {
             <div className="grid grid-cols-3 gap-4 w-full">
               {[
                 { value: '2+', label: 'Internships' },
-                { value: '3+', label: 'Projects' },
-                { value: '3+', label: 'Certs' },
+                { value: '5+', label: 'Projects' },
+                { value: '4+', label: 'Certs' },
               ].map(s => (
                 <div key={s.label} className="glass-card p-4 text-center">
                   <p className="gradient-text font-bold text-2xl font-['Space_Grotesk']">{s.value}</p>
@@ -118,7 +118,7 @@ export default function About() {
             </p>
 
             {/* Highlight cards */}
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {highlights.map((h, i) => (
                 <Card key={h.label} {...h} delay={0.3 + i * 0.08} />
               ))}

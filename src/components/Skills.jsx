@@ -85,13 +85,13 @@ function SkillIcon({ name, icon: Icon, color, href }) {
     <motion.div
       whileHover={{ scale: 1.08, y: -4 }}
       transition={{ type: 'spring', stiffness: 300 }}
-      className={`flex flex-col items-center gap-2 p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] ${
-        href ? 'hover:border-white/30 cursor-pointer shadow-lg shadow-white/5' : 'cursor-default'
+      className={`icon-card ${
+        href ? 'cursor-pointer shadow-lg shadow-white/5' : 'cursor-default'
       } transition-all duration-300 group`}
       title={name}
     >
       <Icon size={28} style={{ color }} className="transition-transform duration-300" />
-      <span className="text-[var(--text-muted)] text-xs font-medium group-hover:text-[var(--text-primary)] transition-colors text-center leading-tight">
+      <span className="text-[var(--text-muted)] text-[10px] sm:text-xs font-medium group-hover:text-[var(--text-primary)] transition-colors text-center leading-tight">
         {name}
       </span>
     </motion.div>

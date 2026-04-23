@@ -77,7 +77,7 @@ export default function Certifications() {
         </motion.div>
 
         {/* Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {certifications.map((cert, i) => {
             const Icon = cert.icon;
             return (

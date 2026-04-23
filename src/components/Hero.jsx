@@ -68,7 +68,7 @@ export default function Hero({ onOpenResume }) {
       />
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+      <div className="relative z-10 text-center px-6 py-20 sm:py-0 max-w-4xl mx-auto">
 
         {/* Name */}
         <motion.h1
