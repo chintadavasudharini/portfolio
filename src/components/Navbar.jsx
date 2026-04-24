@@ -112,16 +112,16 @@ export default function Navbar({ onOpenResume, isDark, onToggleTheme }) {
         </div>
       </motion.nav>
 
-      {/* Mobile drawer */}
+      {/* Mobile dropdown */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
             key="mobile-menu"
-            initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: '100%' }}
-            transition={{ type: 'spring', damping: 30, stiffness: 300 }}
-            className="fixed inset-0 z-40 bg-[var(--bg-nav)] backdrop-blur-2xl flex flex-col items-center justify-center gap-8"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3, ease: 'easeOut' }}
+            className="fixed top-[72px] left-0 right-0 z-40 bg-[var(--bg-nav)] backdrop-blur-2xl border-b border-[var(--border-glass)] shadow-2xl py-8 px-6 flex flex-col gap-6 md:hidden overflow-y-auto max-h-[calc(100vh-80px)]"
             role="dialog"
             aria-label="Mobile menu"
           >
@@ -130,10 +130,12 @@ export default function Navbar({ onOpenResume, isDark, onToggleTheme }) {
                 key={item.href}
                 href={item.href}
                 onClick={e => handleNav(e, item.href)}
-                className="text-2xl font-semibold text-[var(--nav-text)] hover:text-[var(--nav-text-active)] transition-colors"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.06 }}
+                className={`text-xl font-medium transition-all ${
+                  active === item.href ? 'text-[var(--nav-text-active)] pl-2' : 'text-[var(--nav-text)]'
+                }`}
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: i * 0.05 }}
               >
                 {item.label}
               </motion.a>
