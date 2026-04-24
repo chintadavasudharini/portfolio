@@ -59,10 +59,10 @@ export default function Navbar({ onOpenResume, isDark, onToggleTheme }) {
           <a
             href="#hero"
             onClick={e => handleNav(e, '#hero')}
-            className="font-bold text-lg md:text-xl tracking-tight font-['Space_Grotesk'] flex items-center group"
+            className="font-bold text-base sm:text-lg md:text-xl tracking-tight font-['Space_Grotesk'] flex items-center group whitespace-nowrap overflow-hidden"
             aria-label="Home"
           >
-            <span className="navbar-name">Chintada Vasudharini</span>
+            <span className="navbar-name truncate max-w-[160px] xs:max-w-none">Chintada Vasudharini</span>
           </a>
 
           {/* Desktop links */}

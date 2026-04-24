@@ -86,7 +86,7 @@ export default function Hero({ onOpenResume }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
-          className="text-xl md:text-2xl text-[var(--text-primary)] font-medium mb-4 h-9"
+          className="text-lg sm:text-xl md:text-2xl text-[var(--text-primary)] font-medium mb-4 min-h-[2.5rem] flex items-center justify-center flex-wrap"
           aria-label="Role"
         >
           {typed}

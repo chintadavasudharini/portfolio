@@ -18,7 +18,7 @@ export default function App() {
   const toggleTheme = () => setIsDark(!isDark);
 
   return (
-    <div className={`noise-bg min-h-screen ${isDark ? '' : 'light'}`} style={{ background: 'var(--bg-primary)' }}>
+    <div className={`noise-bg min-h-screen overflow-x-hidden ${isDark ? '' : 'light'}`} style={{ background: 'var(--bg-primary)' }}>
       <Navbar
         onOpenResume={() => setIsResumeOpen(true)}
         isDark={isDark}
