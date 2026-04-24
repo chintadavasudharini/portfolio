@@ -2,6 +2,7 @@ import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { FiMail, FiLinkedin, FiGithub, FiSend, FiCheck, FiAlertCircle, FiCode, FiPhone } from 'react-icons/fi';
+import { FaWhatsapp } from 'react-icons/fa6';
 
 const contactLinks = [
   {
@@ -35,6 +36,14 @@ const contactLinks = [
     href: 'tel:+917396922477',
     color: 'text-green-500',
     bg: 'rgba(34, 197, 94, 0.08)',
+  },
+  {
+    icon: FaWhatsapp,
+    label: 'WhatsApp',
+    value: '+91 7396922477',
+    href: 'https://wa.me/917396922477',
+    color: 'text-green-600',
+    bg: 'rgba(37, 211, 102, 0.08)',
   },
 ];
 
