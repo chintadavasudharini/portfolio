@@ -36,7 +36,14 @@ export default function Navbar({ onOpenResume, isDark, onToggleTheme }) {
   const handleNav = (e, href) => {
     e.preventDefault();
     setMenuOpen(false);
-    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+    
+    // Give a small delay for mobile browsers to handle the menu closing
+    setTimeout(() => {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
   };
 
   return (
@@ -133,8 +140,8 @@ export default function Navbar({ onOpenResume, isDark, onToggleTheme }) {
                   onClick={e => handleNav(e, item.href)}
                   className={`text-lg font-medium px-4 py-2 rounded-xl transition-all ${
                     active === item.href 
-                      ? 'bg-[var(--accent-purple)] bg-opacity-10 text-[var(--nav-text-active)]' 
-                      : 'text-[var(--nav-text)] hover:bg-white/5'
+                      ? 'bg-[var(--accent-purple)] text-white shadow-lg' 
+                      : 'text-[var(--nav-text)] hover:bg-[var(--accent-purple)] hover:bg-opacity-10'
                   }`}
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
