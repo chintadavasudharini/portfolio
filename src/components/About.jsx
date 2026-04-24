@@ -64,7 +64,7 @@ export default function About() {
               <div className="aspect-[4/5] rounded-2xl bg-gradient-to-br from-purple-500 via-violet-600 to-cyan-400 p-0.5 shadow-2xl shadow-purple-500/20">
                 <div className="w-full h-full rounded-2xl bg-[var(--bg-secondary)] overflow-hidden flex items-center justify-center">
                   <img
-                    src="/profile.jpg"
+                    src="/profile.jpeg"
                     alt="Chintada Vasudharini"
                     className="w-full h-full object-cover"
                     onError={(e) => {

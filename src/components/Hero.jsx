@@ -152,7 +152,7 @@ export default function Hero({ onOpenResume }) {
         >
           <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-cyan-400 overflow-hidden flex items-center justify-center border border-[var(--border-glass)]">
             <img
-              src="/profile.jpg"
+              src="/profile.jpeg"
               alt="Avatar"
               className="w-full h-full object-cover object-top"
               onError={(e) => {
