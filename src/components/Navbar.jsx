@@ -117,29 +117,33 @@ export default function Navbar({ onOpenResume, isDark, onToggleTheme }) {
         {menuOpen && (
           <motion.div
             key="mobile-menu"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3, ease: 'easeOut' }}
-            className="fixed top-[72px] left-0 right-0 z-40 bg-[var(--bg-nav)] backdrop-blur-2xl border-b border-[var(--border-glass)] shadow-2xl py-8 px-6 flex flex-col gap-6 md:hidden overflow-y-auto max-h-[calc(100vh-80px)]"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3, ease: 'easeInOut' }}
+            className="fixed top-[64px] left-0 right-0 z-40 bg-[var(--bg-nav)] backdrop-blur-xl border-b border-[var(--border-glass)] shadow-2xl overflow-hidden md:hidden"
             role="dialog"
             aria-label="Mobile menu"
           >
-            {navItems.map((item, i) => (
-              <motion.a
-                key={item.href}
-                href={item.href}
-                onClick={e => handleNav(e, item.href)}
-                className={`text-xl font-medium transition-all ${
-                  active === item.href ? 'text-[var(--nav-text-active)] pl-2' : 'text-[var(--nav-text)]'
-                }`}
-                initial={{ opacity: 0, x: -10 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.05 }}
-              >
-                {item.label}
-              </motion.a>
-            ))}
+            <div className="flex flex-col p-6 gap-4">
+              {navItems.map((item, i) => (
+                <motion.a
+                  key={item.href}
+                  href={item.href}
+                  onClick={e => handleNav(e, item.href)}
+                  className={`text-lg font-medium px-4 py-2 rounded-xl transition-all ${
+                    active === item.href 
+                      ? 'bg-[var(--accent-purple)] bg-opacity-10 text-[var(--nav-text-active)]' 
+                      : 'text-[var(--nav-text)] hover:bg-white/5'
+                  }`}
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.04 }}
+                >
+                  {item.label}
+                </motion.a>
+              ))}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
