@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { FiExternalLink, FiGithub, FiCloud, FiImage, FiFileText, FiBook } from 'react-icons/fi';
+import { FiExternalLink, FiGithub, FiCloud, FiImage, FiFileText, FiBook, FiBox } from 'react-icons/fi';
 
 const projects = [
   {
@@ -75,6 +75,24 @@ const projects = [
     github: 'https://github.com/chintadavasudharini/BookCollectionTracker',
     live: null,
     badge: 'Full Stack',
+  },
+  {
+    title: 'Home Inventory Tracker',
+    description:
+      'A production-ready Flask web application for securely managing household inventory with an intuitive interactive dashboard and real-time updates.',
+    icon: FiBox,
+    gradient: 'from-pink-500 via-rose-500 to-red-500',
+    glow: 'rgba(244,63,94,0.3)',
+    tags: ['Python', 'Flask', 'Render', 'Authentication', 'Inventory'],
+    features: [
+      'Secure Session-based Authentication',
+      'Full CRUD Inventory Management',
+      'Multi-field Search & Filtering',
+      'Deployed on Render with Gunicorn',
+    ],
+    github: 'https://github.com/chintadavasudharini/HomeInventoryTracker',
+    live: 'https://homeinventorytracker-t7if.onrender.com/',
+    badge: 'Production Ready',
   },
 ];
 

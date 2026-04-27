@@ -5,7 +5,7 @@ import {
   FaPython, FaJs, FaHtml5, FaCss3Alt, FaBootstrap,
   FaDatabase, FaAws, FaGitAlt, FaGithub, FaReact, FaDocker, FaCode,
 } from 'react-icons/fa';
-import { SiFlask, SiMysql, SiMongodb, SiStreamlit, SiJupyter, SiPostman, SiHackerrank, SiLeetcode, SiVercel } from 'react-icons/si';
+import { SiFlask, SiMysql, SiMongodb, SiStreamlit, SiJupyter, SiPostman, SiHackerrank, SiLeetcode, SiVercel, SiRender } from 'react-icons/si';
 import { FiCpu, FiCode as FiCodeIcon } from 'react-icons/fi';
 import { DiJava } from 'react-icons/di';
 
@@ -167,6 +167,7 @@ export default function Skills() {
               { name: 'Jupyter', icon: SiJupyter },
               { name: 'AWS', icon: FaAws },
               { name: 'Vercel', icon: SiVercel },
+              { name: 'Render', icon: SiRender },
             ].map(tool => (
               <span key={tool.name} className="skill-pill">
                 <tool.icon size={12} style={{ opacity: 0.7 }} />
