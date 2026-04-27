@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { FiExternalLink, FiGithub, FiCloud, FiImage, FiFileText, FiBook, FiBox } from 'react-icons/fi';
+import { FiGithub, FiCloud, FiImage, FiFileText, FiBook, FiBox } from 'react-icons/fi';
 
 const projects = [
   {
@@ -19,7 +19,6 @@ const projects = [
       'Responsive mobile-first design',
     ],
     github: 'https://github.com/chintadavasudharini/quicknotes',
-    live: null,
     badge: 'AWS Deployed',
   },
   {
@@ -37,7 +36,6 @@ const projects = [
       'Real-time caption generation',
     ],
     github: 'https://github.com/chintadavasudharini/imagecaption',
-    live: null,
     badge: 'AI · ML',
   },
   {
@@ -55,7 +53,6 @@ const projects = [
       'IAM role-based access control',
     ],
     github: 'https://github.com/chintadavasudharini/cloud-storage-manager',
-    live: null,
     badge: 'AWS S3',
   },
   {
@@ -73,7 +70,6 @@ const projects = [
       'Deployment-ready for Render & Heroku',
     ],
     github: 'https://github.com/chintadavasudharini/BookCollectionTracker',
-    live: null,
     badge: 'Full Stack',
   },
   {
@@ -91,7 +87,6 @@ const projects = [
       'Deployed on Render with Gunicorn',
     ],
     github: 'https://github.com/chintadavasudharini/HomeInventoryTracker',
-    live: 'https://homeinventorytracker-t7if.onrender.com/',
     badge: 'Production Ready',
   },
 ];
@@ -155,18 +150,6 @@ function ProjectCard({ project, delay }) {
             <FiGithub size={14} />
             GitHub
           </a>
-          {project.live && (
-            <a
-              href={project.live}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary py-2 px-4 text-xs flex-1 justify-center"
-              aria-label={`Live demo of ${project.title}`}
-            >
-              <FiExternalLink size={14} />
-              Live Demo
-            </a>
-          )}
         </div>
       </div>
     </motion.article>
