@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { FiGithub, FiCloud, FiImage, FiFileText, FiBook, FiBox } from 'react-icons/fi';
+import { FiGithub, FiCloud, FiImage, FiFileText, FiBook, FiBox, FiExternalLink } from 'react-icons/fi';
 
 const projects = [
   {
@@ -19,6 +19,7 @@ const projects = [
       'Responsive mobile-first design',
     ],
     github: 'https://github.com/chintadavasudharini/quicknotes',
+    demo: '#',
     badge: 'AWS Deployed',
   },
   {
@@ -36,6 +37,7 @@ const projects = [
       'Real-time caption generation',
     ],
     github: 'https://github.com/chintadavasudharini/imagecaption',
+    demo: 'https://chintadavasudharini-imagecaption.streamlit.app/',
     badge: 'AI · ML',
   },
   {
@@ -53,6 +55,7 @@ const projects = [
       'IAM role-based access control',
     ],
     github: 'https://github.com/chintadavasudharini/cloud-storage-manager',
+    demo: '#',
     badge: 'AWS S3',
   },
   {
@@ -70,6 +73,7 @@ const projects = [
       'Deployment-ready for Render & Heroku',
     ],
     github: 'https://github.com/chintadavasudharini/BookCollectionTracker',
+    demo: 'https://book-collection-tracker.onrender.com/',
     badge: 'Full Stack',
   },
   {
@@ -87,6 +91,7 @@ const projects = [
       'Deployed on Render with Gunicorn',
     ],
     github: 'https://github.com/chintadavasudharini/HomeInventoryTracker',
+    demo: 'https://homeinventorytracker-t7if.onrender.com/',
     badge: 'Production Ready',
   },
 ];
@@ -139,17 +144,31 @@ function ProjectCard({ project, delay }) {
         </div>
 
         {/* Links */}
-        <div className="flex gap-3 mt-auto pt-4 border-t border-[var(--border-glass)]">
+        <div className="flex gap-2 mt-auto pt-4 border-t border-[var(--border-glass)]">
           <a
             href={project.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-outline py-2 px-4 text-xs flex-1 justify-center"
+            className="btn-outline flex-1 justify-center flex items-center gap-1.5 whitespace-nowrap"
+            style={{ padding: '0.4rem 0.8rem', fontSize: '0.8rem' }}
             aria-label={`View ${project.title} on GitHub`}
           >
             <FiGithub size={14} />
             GitHub
           </a>
+          {project.demo && (
+            <a
+              href={project.demo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary flex-1 justify-center flex items-center gap-1.5 whitespace-nowrap"
+              style={{ padding: '0.4rem 0.8rem', fontSize: '0.8rem' }}
+              aria-label={`View Live Demo for ${project.title}`}
+            >
+              <FiExternalLink size={14} />
+              Live Demo
+            </a>
+          )}
         </div>
       </div>
     </motion.article>
