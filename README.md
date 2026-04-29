@@ -9,6 +9,10 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.0-0055FF?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
 
+<br />
+
+**[🚀 View Live Portfolio](https://portfolio-lime-tau-36.vercel.app)**
+
 </div>
 
 <br />
