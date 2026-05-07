@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { FiGithub, FiCloud, FiImage, FiFileText, FiBook, FiBox, FiExternalLink } from 'react-icons/fi';
+import { FiGithub, FiCloud, FiImage, FiFileText, FiBook, FiBox, FiExternalLink, FiShield } from 'react-icons/fi';
 
 const projects = [
   {
@@ -41,23 +41,42 @@ const projects = [
     badge: 'AI · ML',
   },
   {
-    title: 'Cloud Storage Manager',
+    title: 'Home Inventory Tracker',
     description:
-      'A web-based interface for managing AWS S3 buckets — upload, download, organize and share files securely with presigned URLs and IAM-based access controls.',
-    icon: FiCloud,
-    gradient: 'from-orange-500 via-amber-500 to-yellow-500',
-    glow: 'rgba(249,115,22,0.25)',
-    tags: ['Python', 'AWS S3', 'Flask', 'Boto3', 'IAM', 'Presigned URLs'],
+      'A production-ready Flask web application for securely managing household inventory with an intuitive interactive dashboard and real-time updates.',
+    icon: FiBox,
+    gradient: 'from-pink-500 via-rose-500 to-red-500',
+    glow: 'rgba(244,63,94,0.3)',
+    tags: ['Python', 'Flask', 'Render', 'Authentication', 'Inventory'],
     features: [
-      'Multi-file upload with progress bar',
-      'Presigned URL sharing (time-limited)',
-      'Folder-based organisation',
-      'IAM role-based access control',
+      'Secure Session-based Authentication',
+      'Full CRUD Inventory Management',
+      'Multi-field Search & Filtering',
+      'Deployed on Render with Gunicorn',
     ],
-    github: 'https://github.com/chintadavasudharini/cloud-storage-manager',
-    demo: '#',
-    badge: 'AWS S3',
+    github: 'https://github.com/chintadavasudharini/HomeInventoryTracker',
+    demo: 'https://homeinventorytracker-t7if.onrender.com/',
+    badge: 'Production Ready',
   },
+  {
+    title: 'SecureTrust Banking System',
+    description:
+      'A comprehensive Flask-based banking simulation featuring multi-tier authentication (User/Admin), real-time balance tracking, and secure fund transfers with detailed transaction logging.',
+    icon: FiShield,
+    gradient: 'from-blue-600 via-indigo-600 to-violet-600',
+    glow: 'rgba(79,70,229,0.3)',
+    tags: ['Python', 'Flask', 'Session Auth', 'Banking UI', 'Admin Portal', 'Jinja2'],
+    features: [
+      'Multi-tier Auth (User & Admin Portals)',
+      'Secure Deposits, Withdrawals & Transfers',
+      'Transaction History & Account Statements',
+      'Admin User Management & Monitoring',
+    ],
+    github: 'https://github.com/chintadavasudharini/SecureTrust',
+    demo: '#',
+    badge: 'Banking Demo',
+  },
+
   {
     title: 'Book Collection Tracker',
     description:
@@ -76,24 +95,26 @@ const projects = [
     demo: 'https://book-collection-tracker.onrender.com/',
     badge: 'Full Stack',
   },
+
   {
-    title: 'Home Inventory Tracker',
+    title: 'Cloud Storage Manager',
     description:
-      'A production-ready Flask web application for securely managing household inventory with an intuitive interactive dashboard and real-time updates.',
-    icon: FiBox,
-    gradient: 'from-pink-500 via-rose-500 to-red-500',
-    glow: 'rgba(244,63,94,0.3)',
-    tags: ['Python', 'Flask', 'Render', 'Authentication', 'Inventory'],
+      'A web-based interface for managing AWS S3 buckets — upload, download, organize and share files securely with presigned URLs and IAM-based access controls.',
+    icon: FiCloud,
+    gradient: 'from-orange-500 via-amber-500 to-yellow-500',
+    glow: 'rgba(249,115,22,0.25)',
+    tags: ['Python', 'AWS S3', 'Flask', 'Boto3', 'IAM', 'Presigned URLs'],
     features: [
-      'Secure Session-based Authentication',
-      'Full CRUD Inventory Management',
-      'Multi-field Search & Filtering',
-      'Deployed on Render with Gunicorn',
+      'Multi-file upload with progress bar',
+      'Presigned URL sharing (time-limited)',
+      'Folder-based organisation',
+      'IAM role-based access control',
     ],
-    github: 'https://github.com/chintadavasudharini/HomeInventoryTracker',
-    demo: 'https://homeinventorytracker-t7if.onrender.com/',
-    badge: 'Production Ready',
+    github: 'https://github.com/chintadavasudharini/cloud-storage-manager',
+    demo: '#',
+    badge: 'AWS S3',
   },
+
 ];
 
 function ProjectCard({ project, delay }) {
