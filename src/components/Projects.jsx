@@ -115,28 +115,6 @@ const projects = [
     badge: 'AWS S3',
   },
 
-  {
-    title: 'Professional Banking System',
-    description:
-      'A production-grade full‑stack banking platform built with Flask REST APIs, React front‑end, PostgreSQL, JWT authentication, and Docker/Kubernetes orchestration. Features multi‑tier user/admin roles, secure transactions, audit logs, and real‑time balance updates.',
-    icon: FiShield,
-    gradient: 'from-indigo-600 via-purple-600 to-pink-600',
-    glow: 'rgba(139,92,246,0.3)',
-    tags: ['Python', 'Flask', 'React', 'PostgreSQL', 'JWT', 'Docker', 'Kubernetes'],
-    features: [
-      'RESTful API with Flask‑RESTful',
-      'React SPA with modern hooks and context',
-      'Role‑based access control (User/Admin)',
-      'Secure JWT token authentication',
-      'PostgreSQL relational data storage',
-      'Transaction integrity with ACID guarantees',
-      'Docker compose for local dev, Helm charts for K8s',
-      'Automated CI/CD via GitHub Actions',
-    ],
-    github: 'https://github.com/chintadavasudharini/ProfessionalBanking',
-    demo: '#',
-    badge: 'Full‑Stack Demo',
-  },
 ];
 
 function ProjectCard({ project, delay }) {
