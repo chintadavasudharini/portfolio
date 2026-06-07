@@ -19,7 +19,7 @@ const projects = [
       'Responsive mobile-first design',
     ],
     github: 'https://github.com/chintadavasudharini/quicknotes',
-    demo: '#',
+    demo: 'http://98.80.74.218/',
     badge: 'AWS Deployed',
   },
   {
