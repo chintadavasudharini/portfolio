@@ -163,7 +163,6 @@ const projects = [
       overview: 'A production-ready Flask web application for securely managing household inventory with an intuitive interactive dashboard and real-time updates.',
       techStack: [
         { category: 'Backend', tech: 'Python, Flask, Gunicorn' },
-        { category: 'Database', tech: 'SQLite (Local Dev), PostgreSQL (Production migration ready)' },
         { category: 'Security', tech: 'Session-based User Authentication, bcrypt-hashed passwords' },
         { category: 'Deployment', tech: 'Render, Gunicorn WSGI server' }
       ],
@@ -186,9 +185,9 @@ const projects = [
         },
         {
           title: 'Multi-Field Searching & Filtering',
-          icon: 'FiDatabase',
+          icon: 'FiSearch',
           details: [
-            'Implements SQL-based search querying to let users search products by title, category, or location.',
+            'Implements query filter options to let users search products by title, category, or location.',
             'Sorts items dynamically to highlight low stock levels or specific item groups.'
           ]
         }
@@ -217,7 +216,6 @@ const projects = [
       overview: 'A comprehensive Flask-based banking simulation featuring multi-tier authentication (User/Admin), real-time balance tracking, and secure fund transfers with detailed transaction logging.',
       techStack: [
         { category: 'Backend', tech: 'Python, Flask, Jinja2 Templates' },
-        { category: 'Database', tech: 'SQLite / MySQL, SQLAlchemy ORM' },
         { category: 'Security', tech: 'Multi-tier Authorization (User/Admin roles), CSRF mitigation, transaction checks' },
         { category: 'Deployment', tech: 'Render, Gunicorn' }
       ],
@@ -232,10 +230,10 @@ const projects = [
         },
         {
           title: 'Transactional Balance Operations',
-          icon: 'FiDatabase',
+          icon: 'FiCreditCard',
           details: [
             'Implements deposits, withdrawals, and bank transfers.',
-            'Employs database transaction locks or validation steps to ensure balances remain consistent.'
+            'Employs balance validation steps to ensure accounts remain consistent.'
           ]
         },
         {
@@ -257,7 +255,7 @@ const projects = [
     iconName: 'FiBook',
     gradient: 'from-emerald-500 via-teal-500 to-cyan-500',
     glow: 'rgba(16,185,129,0.3)',
-    tags: ['Python', 'Flask', 'SQLite', 'Authentication', 'Render', 'Responsive UI'],
+    tags: ['Python', 'Flask', 'Authentication', 'Render', 'Responsive UI'],
     features: [
       'Secure User Authentication (Register/Login)',
       'Complete Book Management (CRUD)',
@@ -271,7 +269,6 @@ const projects = [
       overview: 'A Flask-based web application that helps users manage their personal book collections with secure authentication, modern UI, and deployment-ready configurations.',
       techStack: [
         { category: 'Backend', tech: 'Python, Flask' },
-        { category: 'Database', tech: 'SQLite (development), PostgreSQL (production-ready)' },
         { category: 'Deployment', tech: 'Render, Heroku' }
       ],
       sections: [
