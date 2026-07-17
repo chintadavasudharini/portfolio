@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { FiGithub, FiCloud, FiImage, FiFileText, FiBook, FiBox, FiExternalLink, FiShield } from 'react-icons/fi';
+import { FiGithub, FiCloud, FiImage, FiFileText, FiBook, FiBox, FiExternalLink, FiShield, FiBookOpen } from 'react-icons/fi';
 import ProjectDetailsModal from './ProjectDetailsModal.jsx';
 
 const projects = [
@@ -82,6 +82,62 @@ const projects = [
             'Deployed on an AWS EC2 (Ubuntu) instance.',
             'Configured Gunicorn as the WSGI server run by systemd.',
             'Set up Nginx as a reverse proxy, linking incoming HTTP traffic to Gunicorn\'s Unix domain socket for performance and security.'
+          ]
+        }
+      ]
+    }
+  },
+  {
+    title: 'InterviewPrep Hub',
+    description:
+      'A structured, interactive full-stack learning platform for mastering Python, MySQL, DSA, AWS, APIs, Machine Learning, Flask, and Coding Patterns for technical interviews.',
+    icon: FiBookOpen,
+    iconName: 'FiBookOpen',
+    gradient: 'from-rose-500 via-pink-500 to-purple-500',
+    glow: 'rgba(236,72,153,0.3)',
+    tags: ['Python', 'Flask', 'DSA', 'MySQL', 'AWS', 'Machine Learning', 'REST API'],
+    features: [
+      '8 specialized Daily interview preparation paths',
+      'Interactive modules for OOP, SQL & API design',
+      'Structured Coding Patterns and DSA track',
+      'Automated deployment configuration on Render',
+    ],
+    github: 'https://github.com/chintadavasudharini/InterviewPrep',
+    demo: 'https://interviewprep-gqfk.onrender.com/',
+    badge: 'Learning Platform',
+    detailedWriteup: {
+      overview: 'InterviewPrep (Vasudharini\'s Learning Portfolio) is a structured, full-stack learning repository and web application designed to master core software development competencies. Designed for professional excellence and interview success, it organizes advanced technical concepts, optimized code implementations, and systemic preparation paths into a unified, interactive portal. The platform covers OOP foundations, SQL query normalization, algorithms, cloud patterns, machine learning, and RESTful architectures.',
+      techStack: [
+        { category: 'Backend', tech: 'Python, Flask' },
+        { category: 'Frontend', tech: 'HTML5, CSS3, JavaScript' },
+        { category: 'Domains', tech: 'Object-Oriented Programming (OOP), Data Structures & Algorithms, MySQL, Cloud Architecture (AWS), APIs, Machine Learning' },
+        { category: 'Deployment', tech: 'Render' }
+      ],
+      sections: [
+        {
+          title: 'Specialized Daily Prep Paths',
+          icon: 'FiTrello',
+          details: [
+            'Python Master: Covers OOP concepts (Inheritance, Abstraction, Encapsulation), standard functions, and library details.',
+            'SQL Specialist: Focuses on Joins, Indexing, Transactions, Normalization, and optimization.',
+            'DSA Expert: Tracks dynamic programming, trees, graphs, and basic data structures.'
+          ]
+        },
+        {
+          title: 'Full-Stack Core Focus Areas',
+          icon: 'FiBookOpen',
+          details: [
+            'Flask Master: Builds web interfaces using Jinja2 templates, blueprints, and routing structures.',
+            'API Developer: Integrates RESTful conventions, authentication headers, OpenAPI docs, and Postman testing.',
+            'Coding Patterns: Covers standard interview patterns (Sliding Window, Two Pointers, Backtracking, Heaps).'
+          ]
+        },
+        {
+          title: 'Cloud & AI/ML Integrations',
+          icon: 'FiCpu',
+          details: [
+            'Cloud Architect: Details AWS core services (IAM, EC2/S3, Serverless architecture, and microservices).',
+            'ML Engineer: Explores regression, classification, NLP, and model evaluation.'
           ]
         }
       ]
