@@ -306,7 +306,7 @@ const projects = [
       'Folder-based organisation',
       'IAM role-based access control',
     ],
-    github: 'https://github.com/chintadavasudharini/cloud-storage-manager',
+    github: 'https://github.com/chintadavasudharini/CloudStorageManager',
     demo: '#',
     badge: 'AWS S3',
     detailedWriteup: {
