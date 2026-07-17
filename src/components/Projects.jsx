@@ -88,7 +88,7 @@ const projects = [
     }
   },
   {
-    title: 'InterviewPrep Hub',
+    title: 'InterviewPrep',
     description:
       'A structured, interactive full-stack learning platform for mastering Python, MySQL, DSA, AWS, APIs, Machine Learning, Flask, and Coding Patterns for technical interviews.',
     icon: FiBookOpen,
