@@ -5,7 +5,7 @@ import { FiCode, FiCloud, FiCpu, FiBarChart2 } from 'react-icons/fi';
 
 const highlights = [
   { icon: FiCpu,        label: 'AI & ML',      desc: 'NLP · Deep Learning · Hugging Face'    },
-  { icon: FiBarChart2,  label: 'Data Science', desc: 'EDA · Pandas · NumPy · Visualization'  },
+  { icon: FiBarChart2,  label: 'Data Science', desc: 'Cleaning · Preprocessing · EDA · Analytics'  },
   { icon: FiCode,       label: 'Full-Stack',   desc: 'Python · Flask · REST APIs · React'   },
   { icon: FiCloud,      label: 'AWS Cloud',    desc: 'S3 · EC2 · Lambda · Deployment'        },
 ];
