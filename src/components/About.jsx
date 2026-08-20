@@ -1,13 +1,13 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { FiCode, FiCloud, FiCpu, FiHeart } from 'react-icons/fi';
+import { FiCode, FiCloud, FiCpu, FiBarChart2 } from 'react-icons/fi';
 
 const highlights = [
-  { icon: FiCode,  label: 'Full-Stack',  desc: 'Python · Flask · REST APIs · React'  },
-  { icon: FiCloud, label: 'AWS Cloud',   desc: 'S3 · EC2 · Lambda · Deployment'       },
-  { icon: FiCpu,   label: 'AI & ML',     desc: 'NLP · Deep Learning · Hugging Face'   },
-  { icon: FiHeart, label: 'Passionate',  desc: 'Lifelong learner & team collaborator' },
+  { icon: FiCode,       label: 'Full-Stack',   desc: 'Python · Flask · REST APIs · React'   },
+  { icon: FiCloud,      label: 'AWS Cloud',    desc: 'S3 · EC2 · Lambda · Deployment'        },
+  { icon: FiCpu,        label: 'AI & ML',      desc: 'NLP · Deep Learning · Hugging Face'    },
+  { icon: FiBarChart2,  label: 'Data Science', desc: 'EDA · Pandas · NumPy · Visualization'  },
 ];
 
 function Card({ icon: Icon, label, desc, delay }) {
@@ -101,7 +101,7 @@ export default function About() {
             <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-1 font-['Space_Grotesk']">
               Chintada Vasudharini
             </h3>
-            <p className="gradient-text font-semibold text-sm mb-5">Python Full Stack Developer · AWS · AI-ML</p>
+            <p className="gradient-text font-semibold text-sm mb-5">Python Full Stack Developer · AWS · Data Science · AI-ML</p>
 
             <p className="text-[var(--text-muted)] leading-relaxed mb-4">
               I am a Computer Science graduate with hands-on experience in Python, Java, SQL, Machine Learning, Data Science, and full-stack development. I have practical experience building AI-powered and web applications using Python, Flask, and MySQL.
