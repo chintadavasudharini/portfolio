@@ -51,7 +51,7 @@ const skillGroups = [
     ],
   },
   {
-    category: 'AI/ML Tools & Libraries',
+    category: 'AI/ML Tools & Frameworks',
     color: 'from-amber-500/20 to-amber-500/5',
     border: 'border-amber-500/20',
     skills: [
@@ -59,10 +59,17 @@ const skillGroups = [
       { name: 'TensorFlow',   icon: SiTensorflow,   color: '#ff6f00' },
       { name: 'PyTorch',      icon: SiPytorch,      color: '#ee4c2c' },
       { name: 'Hugging Face', icon: FiCpu,          color: '#f59e0b' },
-      { name: 'NumPy',        icon: SiNumpy,        color: '#013243' },
-      { name: 'Pandas',       icon: SiPandas,       color: '#150458' },
-      { name: 'Matplotlib',   icon: FaChartBar,     color: '#11557c' },
-      { name: 'Seaborn',      icon: FaChartLine,    color: '#4c72b0' },
+    ],
+  },
+  {
+    category: 'Data Science & Viz Libraries',
+    color: 'from-blue-500/20 to-blue-500/5',
+    border: 'border-blue-500/20',
+    skills: [
+      { name: 'NumPy',      icon: SiNumpy,      color: '#013243' },
+      { name: 'Pandas',     icon: SiPandas,     color: '#150458' },
+      { name: 'Matplotlib', icon: FaChartBar,     color: '#11557c' },
+      { name: 'Seaborn',    icon: FaChartLine,    color: '#4c72b0' },
     ],
   },
   {
