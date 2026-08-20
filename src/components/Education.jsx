@@ -14,7 +14,7 @@ const education = [
     scoreLabel: 'CGPA',
     icon: FaGraduationCap,
     color: 'from-purple-500 to-violet-600',
-    tags: ['AIML Specialization', 'Data Structures', 'Cloud Computing', 'Full-Stack Dev'],
+    tags: ['AIML Specialization', 'Data Science', 'AWS Cloud', 'Full-Stack Dev'],
   },
   {
     degree: 'Intermediate (MPC) — Class XII',
