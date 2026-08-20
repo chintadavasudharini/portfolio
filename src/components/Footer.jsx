@@ -39,7 +39,7 @@ export default function Footer() {
             <p className="font-['Space_Grotesk'] font-bold text-2xl gradient-text mb-1">
               Chintada Vasudharini
             </p>
-            <p className="text-slate-400 text-sm">Python Full Stack · AWS · AI-ML</p>
+            <p className="text-slate-400 text-sm">AI-ML · DS · Python Full Stack · AWS</p>
           </div>
 
           {/* Nav links */}

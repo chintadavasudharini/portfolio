@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { FiArrowDown, FiDownload, FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
 import { SiHackerrank, SiLeetcode } from 'react-icons/si';
 
-const TYPING_ROLES = ['Python Full Stack Developer', 'AWS Certified Cloud Practitioner', 'Data Science Explorer', 'AI-ML Enthusiast'];
+const TYPING_ROLES = ['AI-ML Enthusiast', 'Data Science Explorer', 'Python Full Stack Developer', 'AWS Certified Cloud Practitioner'];
 
 import { useEffect, useState } from 'react';
 

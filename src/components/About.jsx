@@ -101,7 +101,7 @@ export default function About() {
             <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-1 font-['Space_Grotesk']">
               Chintada Vasudharini
             </h3>
-            <p className="gradient-text font-semibold text-sm mb-5">Python Full Stack Developer · AWS · Data Science · AI-ML</p>
+            <p className="gradient-text font-semibold text-sm mb-5">AI-ML · DS · Python Full Stack · AWS</p>
 
             <p className="text-[var(--text-muted)] leading-relaxed mb-4">
               I'm a software engineer and Computer Science graduate focused on the intersection of full-stack development, data science, and artificial intelligence. I specialize in building smart web applications using Python, Flask, and Java, backed by MySQL databases.
