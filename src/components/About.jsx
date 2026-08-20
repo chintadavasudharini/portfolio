@@ -104,7 +104,7 @@ export default function About() {
             <p className="gradient-text font-semibold text-sm mb-5">AI-ML · DataScience · Python Full Stack · AWS</p>
 
             <p className="text-[var(--text-muted)] leading-relaxed mb-4">
-              I'm a software engineer and Computer Science graduate focused on the intersection of AIML, Data Science, Full-Stack Development and AWS. I specialize in building web applications using Python, JavaScript, Flask, MySQL, APIs, and AWS.
+              I'm a software engineer and Computer Science graduate focused on the intersection of AIML, Data Science, AWS and Full-Stack Development. I specialize in building web applications using Python, JavaScript, Flask, MySQL, APIs, and AWS.
             </p>
             <p className="text-[var(--text-muted)] leading-relaxed mb-8">
               Driven by curiosity and a strong foundation in problem-solving, I love translating complex algorithms and data patterns into user-friendly tools. I am continuously exploring emerging tech to engineer robust, intelligent solutions that make an impact.
