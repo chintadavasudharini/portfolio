@@ -104,17 +104,10 @@ export default function About() {
             <p className="gradient-text font-semibold text-sm mb-5">Python Full Stack Developer · AWS · AI-ML</p>
 
             <p className="text-[var(--text-muted)] leading-relaxed mb-4">
-              I'm a passionate Computer Science graduate from <span className="text-[var(--text-primary)] font-medium">KL University</span> with
-              hands-on experience in building full-stack web applications, cloud-native services on AWS, and intelligent
-              machine-learning pipelines.
-            </p>
-            <p className="text-[var(--text-muted)] leading-relaxed mb-4">
-              Through my internships at <span className="text-[var(--text-primary)] font-medium">Codegnan</span> and an <span className="text-[var(--text-primary)] font-medium">AWS AI-ML program</span>,
-              I've deployed real-world apps, optimised performance by up to <span className="text-[var(--text-primary)] font-medium">30%</span>, and
-              built data pipelines that improved efficiency by <span className="text-[var(--text-primary)] font-medium">20%</span>.
+              I am a Computer Science graduate with hands-on experience in Python, Java, SQL, Machine Learning, Data Science, and full-stack development. I have practical experience building AI-powered and web applications using Python, Flask, and MySQL.
             </p>
             <p className="text-[var(--text-muted)] leading-relaxed mb-8">
-              I thrive in agile environments, love clean code, and am always eager to learn the next exciting technology.
+              With strong problem-solving skills and a keen interest in AI/ML, Data Science, and software development, I am passionate about learning new technologies, building intelligent solutions, and continuously improving my technical expertise.
             </p>
 
             {/* Highlight cards */}

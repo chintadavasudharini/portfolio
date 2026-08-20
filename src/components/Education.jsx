@@ -6,11 +6,11 @@ import { FaGraduationCap, FaBuildingColumns, FaSchool } from 'react-icons/fa6';
 
 const education = [
   {
-    degree: 'B.Tech — Computer Science & Engineering',
-    institution: 'KL University',
+    degree: 'Bachelor of Technology (B.Tech) – Computer Science and Engineering',
+    institution: 'Koneru Lakshmaiah University',
     location: 'Vijayawada, Andhra Pradesh',
     period: '2020 – 2024',
-    score: 'CGPA: 8.51',
+    score: 'CGPA: 8.51/10',
     scoreLabel: 'CGPA',
     icon: FaGraduationCap,
     color: 'from-purple-500 to-violet-600',

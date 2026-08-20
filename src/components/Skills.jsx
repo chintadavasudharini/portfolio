@@ -4,9 +4,14 @@ import { useRef } from 'react';
 import {
   FaPython, FaJs, FaHtml5, FaCss3Alt, FaBootstrap,
   FaDatabase, FaAws, FaGitAlt, FaGithub, FaReact, FaDocker, FaCode,
+  FaChartBar, FaChartLine, FaChartPie
 } from 'react-icons/fa';
-import { SiFlask, SiMysql, SiMongodb, SiStreamlit, SiJupyter, SiPostman, SiHackerrank, SiLeetcode, SiVercel, SiRender } from 'react-icons/si';
-import { FiCpu, FiCode as FiCodeIcon } from 'react-icons/fi';
+import {
+  SiFlask, SiMysql, SiMongodb, SiStreamlit, SiJupyter, SiPostman,
+  SiHackerrank, SiLeetcode, SiVercel, SiRender, SiTensorflow,
+  SiScikitlearn, SiPandas, SiNumpy, SiPytorch, SiGooglecolab
+} from 'react-icons/si';
+import { FiCpu, FiCode as FiCodeIcon, FiZap } from 'react-icons/fi';
 import { DiJava } from 'react-icons/di';
 
 const skillGroups = [
@@ -18,45 +23,7 @@ const skillGroups = [
       { name: 'Python',     icon: FaPython,     color: '#3776ab' },
       { name: 'Java',       icon: DiJava,       color: '#f8981d' },
       { name: 'JavaScript', icon: FaJs,         color: '#f7df1e' },
-    ],
-  },
-  {
-    category: 'Frontend',
-    color: 'from-cyan-500/20 to-cyan-500/5',
-    border: 'border-cyan-500/20',
-    skills: [
-      { name: 'HTML5',      icon: FaHtml5,      color: '#e34f26' },
-      { name: 'CSS3',       icon: FaCss3Alt,    color: '#1572b6' },
-      { name: 'Bootstrap',  icon: FaBootstrap,  color: '#7952b3' },
-      { name: 'React',      icon: FaReact,      color: '#61dafb' },
-    ],
-  },
-  {
-    category: 'Backend',
-    color: 'from-violet-500/20 to-violet-500/5',
-    border: 'border-violet-500/20',
-    skills: [
-      { name: 'Flask',      icon: SiFlask,      color: '#94a3b8' },
-      { name: 'REST APIs',  icon: FiCpu,        color: '#8b5cf6' },
-    ],
-  },
-  {
-    category: 'Database',
-    color: 'from-sky-500/20 to-sky-500/5',
-    border: 'border-sky-500/20',
-    skills: [
-      { name: 'MySQL',    icon: SiMysql,    color: '#4479a1' },
-      { name: 'MongoDB',  icon: SiMongodb,  color: '#47a248' },
-    ],
-  },
-  {
-    category: 'Cloud & DevOps',
-    color: 'from-orange-500/20 to-orange-500/5',
-    border: 'border-orange-500/20',
-    skills: [
-      { name: 'AWS',       icon: FaAws,     color: '#ff9900' },
-      { name: 'Git',       icon: FaGitAlt,  color: '#f05032' },
-      { name: 'GitHub',    icon: FaGithub,  color: '#94a3b8' },
+      { name: 'SQL',        icon: FaDatabase,   color: '#00758f' },
     ],
   },
   {
@@ -64,9 +31,61 @@ const skillGroups = [
     color: 'from-pink-500/20 to-pink-500/5',
     border: 'border-pink-500/20',
     skills: [
-      { name: 'NLP',           icon: FiCpu, color: '#ec4899' },
-      { name: 'Deep Learning', icon: FiCpu, color: '#8b5cf6' },
-      { name: 'Hugging Face',  icon: FiCpu, color: '#f59e0b' },
+      { name: 'Machine Learning', icon: FiCpu, color: '#a855f7' },
+      { name: 'Deep Learning',    icon: FiCpu, color: '#ec4899' },
+      { name: 'NLP',              icon: FiCpu, color: '#06b6d4' },
+      { name: 'Generative AI',    icon: FiZap, color: '#f59e0b' },
+    ],
+  },
+  {
+    category: 'Data Science & Analytics',
+    color: 'from-emerald-500/20 to-emerald-500/5',
+    border: 'border-emerald-500/20',
+    skills: [
+      { name: 'Data Cleaning',      icon: FaCode,      color: '#10b981' },
+      { name: 'Data Preprocessing', icon: FiCpu,       color: '#3b82f6' },
+      { name: 'EDA',                icon: FaChartBar,  color: '#8b5cf6' },
+      { name: 'Feature Engineering',icon: FiCpu,       color: '#ec4899' },
+      { name: 'Statistical Analysis',icon: FaChartLine,color: '#f59e0b' },
+      { name: 'Model Evaluation',   icon: FaChartPie,  color: '#ef4444' },
+    ],
+  },
+  {
+    category: 'AI/ML Tools & Libraries',
+    color: 'from-amber-500/20 to-amber-500/5',
+    border: 'border-amber-500/20',
+    skills: [
+      { name: 'Scikit-learn', icon: SiScikitlearn, color: '#f89939' },
+      { name: 'TensorFlow',   icon: SiTensorflow,   color: '#ff6f00' },
+      { name: 'PyTorch',      icon: SiPytorch,      color: '#ee4c2c' },
+      { name: 'Hugging Face', icon: FiCpu,          color: '#f59e0b' },
+      { name: 'NumPy',        icon: SiNumpy,        color: '#013243' },
+      { name: 'Pandas',       icon: SiPandas,       color: '#150458' },
+      { name: 'Matplotlib',   icon: FaChartBar,     color: '#11557c' },
+      { name: 'Seaborn',      icon: FaChartLine,    color: '#4c72b0' },
+    ],
+  },
+  {
+    category: 'Web Development',
+    color: 'from-cyan-500/20 to-cyan-500/5',
+    border: 'border-cyan-500/20',
+    skills: [
+      { name: 'HTML5',      icon: FaHtml5,      color: '#e34f26' },
+      { name: 'CSS3',       icon: FaCss3Alt,    color: '#1572b6' },
+      { name: 'Bootstrap',  icon: FaBootstrap,  color: '#7952b3' },
+      { name: 'React.js',   icon: FaReact,      color: '#61dafb' },
+      { name: 'Flask',      icon: SiFlask,      color: '#94a3b8' },
+      { name: 'REST APIs',  icon: FiCpu,        color: '#8b5cf6' },
+    ],
+  },
+  {
+    category: 'Databases & Cloud',
+    color: 'from-sky-500/20 to-sky-500/5',
+    border: 'border-sky-500/20',
+    skills: [
+      { name: 'MySQL',    icon: SiMysql,    color: '#4479a1' },
+      { name: 'MongoDB',  icon: SiMongodb,  color: '#47a248' },
+      { name: 'AWS',      icon: FaAws,      color: '#ff9900' },
     ],
   },
   {
@@ -165,6 +184,7 @@ export default function Skills() {
               { name: 'Postman', icon: SiPostman },
               { name: 'Streamlit', icon: SiStreamlit },
               { name: 'Jupyter', icon: SiJupyter },
+              { name: 'Google Colab', icon: SiGooglecolab },
               { name: 'AWS', icon: FaAws },
               { name: 'Vercel', icon: SiVercel },
               { name: 'Render', icon: SiRender },

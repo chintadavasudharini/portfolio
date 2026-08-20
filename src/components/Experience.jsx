@@ -5,34 +5,37 @@ import { FiBriefcase, FiCalendar, FiMapPin, FiCheck, FiExternalLink, FiAward } f
 
 const experiences = [
   {
-    role: 'Python Full Stack Developer Intern',
+    role: 'Python Full Stack Intern',
     company: 'Codegnan IT Solutions',
     location: 'Vijayawada, AP',
     period: 'Sep 2024 – Aug 2025',
     type: 'Internship',
     color: 'from-purple-500 to-violet-600',
     highlights: [
-      'Engineered full-stack web features using Python (Flask) and REST APIs, boosting application performance by 25–30% through query optimisation and caching strategies.',
-      'Collaborated in Agile sprints using GitHub for version control and pull-request reviews, maintaining clean and scalable code across a team of 6.',
-      'Deployed production-ready applications to AWS (EC2 + S3), ensuring 99.9% uptime and fast content delivery.',
-      'Wrote and maintained unit tests, reducing regression bugs by 40% across module releases.',
+      'Developed full-stack web applications using Python, Flask, MySQL, HTML, CSS, and JavaScript.',
+      'Designed and integrated REST APIs for backend communication and application functionality.',
+      'Optimized backend logic and database queries, boosting application performance by 25–30%.',
+      'Worked on database operations, application testing, debugging, and feature development, reducing regression bugs by 40%.',
+      'Used Git and GitHub for version control and collaborated in an Agile development environment across a team of 6.',
+      'Deployed production-ready applications to AWS (EC2 + S3), ensuring high uptime and fast content delivery.'
     ],
-    tags: ['Python', 'Flask', 'REST APIs', 'AWS', 'GitHub', 'Agile'],
+    tags: ['Python', 'Flask', 'MySQL', 'REST APIs', 'AWS', 'Git', 'GitHub', 'Agile'],
   },
   {
-    role: 'AI-ML Virtual Internship',
-    company: 'AICTE NEAT - EduSkills Foundation',
-    location: 'Remote (Supported by AWS Academy)',
+    role: 'AWS AI-ML Intern',
+    company: 'AWS Academy (AICTE NEAT - EduSkills Foundation)',
+    location: 'Remote',
     period: 'Mar 2022 – May 2022',
     type: 'Virtual Internship',
     color: 'from-pink-500 to-rose-600',
     highlights: [
-      'Successfully completed a 10-week intensive virtual internship program focusing on AI/ML fundamentals.',
-      'Mastered core concepts including supervised/unsupervised learning, feature engineering, and model deployment.',
-      'Engaged with AWS Academy curriculum to understand cloud-native machine learning workflows.',
-      'Earned a completion certificate after rigorous evaluation and project submissions.',
+      'Developed and deployed machine learning solutions using AWS services including Amazon S3, Amazon EC2, and AWS Lambda.',
+      'Worked with data-processing workflows and cloud-based AI/ML applications.',
+      'Built automated data-processing workflows that improved data-processing efficiency by around 20%.',
+      'Applied machine learning and cloud deployment concepts to practical AI/ML use cases.',
+      'Successfully completed a 10-week intensive virtual internship program focusing on AI/ML fundamentals, mastering core concepts including supervised/unsupervised learning, feature engineering, and model deployment.'
     ],
-    tags: ['AI', 'ML', 'Python', 'AWS Academy', 'Data Preprocessing'],
+    tags: ['AI', 'ML', 'Python', 'AWS Academy', 'AWS S3', 'AWS EC2', 'AWS Lambda', 'Data Preprocessing'],
     link: 'https://www.linkedin.com/feed/update/urn:li:activity:6957590033918763008/',
   },
 ];
