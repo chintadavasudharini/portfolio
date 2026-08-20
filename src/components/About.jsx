@@ -4,10 +4,10 @@ import { useRef } from 'react';
 import { FiCode, FiCloud, FiCpu, FiBarChart2 } from 'react-icons/fi';
 
 const highlights = [
-  { icon: FiCode,       label: 'Full-Stack',   desc: 'Python · Flask · REST APIs · React'   },
-  { icon: FiCloud,      label: 'AWS Cloud',    desc: 'S3 · EC2 · Lambda · Deployment'        },
   { icon: FiCpu,        label: 'AI & ML',      desc: 'NLP · Deep Learning · Hugging Face'    },
   { icon: FiBarChart2,  label: 'Data Science', desc: 'EDA · Pandas · NumPy · Visualization'  },
+  { icon: FiCode,       label: 'Full-Stack',   desc: 'Python · Flask · REST APIs · React'   },
+  { icon: FiCloud,      label: 'AWS Cloud',    desc: 'S3 · EC2 · Lambda · Deployment'        },
 ];
 
 function Card({ icon: Icon, label, desc, delay }) {
@@ -101,7 +101,7 @@ export default function About() {
             <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-1 font-['Space_Grotesk']">
               Chintada Vasudharini
             </h3>
-            <p className="gradient-text font-semibold text-sm mb-5">AI-ML · Data Science · Python Full Stack · AWS</p>
+            <p className="gradient-text font-semibold text-sm mb-5">AI-ML · DataScience · Python Full Stack · AWS</p>
 
             <p className="text-[var(--text-muted)] leading-relaxed mb-4">
               I'm a software engineer and Computer Science graduate focused on the intersection of full-stack development, data science, and artificial intelligence. I specialize in building smart web applications using Python, Flask, and Java, backed by MySQL databases.

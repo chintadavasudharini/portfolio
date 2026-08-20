@@ -114,7 +114,7 @@ export default function Contact() {
           >
             <div className="glass-card p-6 sm:p-8">
               <h3 className="font-['Space_Grotesk'] font-bold text-[var(--text-primary)] text-xl mb-1">Chintada Vasudharini</h3>
-              <p className="gradient-text text-sm font-semibold mb-4 text-base">AI-ML · Data Science · Python Full Stack · AWS</p>
+              <p className="gradient-text text-sm font-semibold mb-4 text-base">AI-ML · DataScience · Python Full Stack · AWS</p>
               <p className="text-[var(--text-muted)] text-sm leading-relaxed mb-8">
                 Based in Andhra Pradesh, India · Available for full-time roles &amp; freelance projects.
               </p>
