@@ -104,10 +104,10 @@ export default function About() {
             <p className="gradient-text font-semibold text-sm mb-5">Python Full Stack Developer · AWS · Data Science · AI-ML</p>
 
             <p className="text-[var(--text-muted)] leading-relaxed mb-4">
-              I am a Computer Science graduate with hands-on experience in Python, Java, SQL, Machine Learning, Data Science, and full-stack development. I have practical experience building AI-powered and web applications using Python, Flask, and MySQL.
+              I'm a software engineer and Computer Science graduate focused on the intersection of full-stack development, data science, and artificial intelligence. I specialize in building smart web applications using Python, Flask, and Java, backed by MySQL databases.
             </p>
             <p className="text-[var(--text-muted)] leading-relaxed mb-8">
-              With strong problem-solving skills and a keen interest in AI/ML, Data Science, and software development, I am passionate about learning new technologies, building intelligent solutions, and continuously improving my technical expertise.
+              Driven by curiosity and a strong foundation in problem-solving, I love translating complex algorithms and data patterns into user-friendly tools. I am continuously exploring emerging tech to engineer robust, intelligent solutions that make an impact.
             </p>
 
             {/* Highlight cards */}
