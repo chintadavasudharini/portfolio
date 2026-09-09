@@ -4,12 +4,13 @@ import { useRef } from 'react';
 import {
   FaPython, FaJs, FaHtml5, FaCss3Alt, FaBootstrap,
   FaDatabase, FaAws, FaGitAlt, FaGithub, FaReact, FaDocker, FaCode,
-  FaChartBar, FaChartLine, FaChartPie
+  FaChartBar, FaChartLine, FaChartPie, FaFileExcel
 } from 'react-icons/fa';
 import {
   SiFlask, SiMysql, SiMongodb, SiStreamlit, SiJupyter, SiPostman,
-  SiHackerrank, SiLeetcode, SiVercel, SiRender, SiTensorflow,
-  SiScikitlearn, SiPandas, SiNumpy, SiPytorch, SiGooglecolab
+  SiHackerrank, SiLeetcode, SiCodechef, SiVercel, SiRender, SiTensorflow,
+  SiScikitlearn, SiPandas, SiNumpy, SiPytorch, SiGooglecolab, SiCplusplus,
+  SiSpringboot
 } from 'react-icons/si';
 import { FiCpu, FiCode as FiCodeIcon, FiZap } from 'react-icons/fi';
 import { DiJava } from 'react-icons/di';
@@ -22,6 +23,7 @@ const skillGroups = [
     skills: [
       { name: 'Python',     icon: FaPython,     color: '#3776ab' },
       { name: 'Java',       icon: DiJava,       color: '#f8981d' },
+      { name: 'C++',        icon: SiCplusplus,  color: '#00599c' },
       { name: 'JavaScript', icon: FaJs,         color: '#f7df1e' },
       { name: 'SQL',        icon: FaDatabase,   color: '#00758f' },
     ],
@@ -68,8 +70,10 @@ const skillGroups = [
     skills: [
       { name: 'NumPy',      icon: SiNumpy,      color: '#013243' },
       { name: 'Pandas',     icon: SiPandas,     color: '#150458' },
-      { name: 'Matplotlib', icon: FaChartBar,     color: '#11557c' },
-      { name: 'Seaborn',    icon: FaChartLine,    color: '#4c72b0' },
+      { name: 'Matplotlib', icon: FaChartBar,   color: '#11557c' },
+      { name: 'Seaborn',    icon: FaChartLine,  color: '#4c72b0' },
+      { name: 'Power BI',   icon: FaChartPie,   color: '#f2c811' },
+      { name: 'Excel',      icon: FaFileExcel,  color: '#107c41' },
     ],
   },
   {
@@ -77,12 +81,13 @@ const skillGroups = [
     color: 'from-cyan-500/20 to-cyan-500/5',
     border: 'border-cyan-500/20',
     skills: [
-      { name: 'HTML5',      icon: FaHtml5,      color: '#e34f26' },
-      { name: 'CSS3',       icon: FaCss3Alt,    color: '#1572b6' },
-      { name: 'Bootstrap',  icon: FaBootstrap,  color: '#7952b3' },
-      { name: 'React.js',   icon: FaReact,      color: '#61dafb' },
-      { name: 'Flask',      icon: SiFlask,      color: '#94a3b8' },
-      { name: 'REST APIs',  icon: FiCpu,        color: '#8b5cf6' },
+      { name: 'HTML5',        icon: FaHtml5,        color: '#e34f26' },
+      { name: 'CSS3',         icon: FaCss3Alt,      color: '#1572b6' },
+      { name: 'Bootstrap',    icon: FaBootstrap,    color: '#7952b3' },
+      { name: 'React.js',     icon: FaReact,        color: '#61dafb' },
+      { name: 'Flask',        icon: SiFlask,        color: '#94a3b8' },
+      { name: 'Spring Boot',  icon: SiSpringboot,   color: '#6db33f' },
+      { name: 'REST APIs',    icon: FiCpu,          color: '#8b5cf6' },
     ],
   },
   {
@@ -96,12 +101,14 @@ const skillGroups = [
     ],
   },
   {
-    category: 'Competitive Coding',
+    category: 'Competitive Coding & DSA',
     color: 'from-green-500/20 to-green-500/5',
     border: 'border-green-500/20',
     skills: [
-      { name: 'HackerRank', icon: SiHackerrank, color: '#2ec866', href: 'https://www.hackerrank.com/profile/Vasudharini_21' },
+      { name: 'DSA',        icon: FaCode,       color: '#a855f7' },
       { name: 'LeetCode',   icon: SiLeetcode,   color: '#ffa116', href: 'https://leetcode.com/u/chintadavasudharini/' },
+      { name: 'CodeChef',   icon: SiCodechef,   color: '#5B4638', href: 'https://www.codechef.com/users/vasudharini' },
+      { name: 'HackerRank', icon: SiHackerrank, color: '#2ec866', href: 'https://www.hackerrank.com/profile/Vasudharini_21' },
     ],
   },
 ];
@@ -189,6 +196,8 @@ export default function Skills() {
               { name: 'Git', icon: FaGitAlt },
               { name: 'GitHub', icon: FaGithub },
               { name: 'Postman', icon: SiPostman },
+              { name: 'Power BI', icon: FaChartPie },
+              { name: 'Excel', icon: FaFileExcel },
               { name: 'Streamlit', icon: SiStreamlit },
               { name: 'Jupyter', icon: SiJupyter },
               { name: 'Google Colab', icon: SiGooglecolab },

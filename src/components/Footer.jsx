@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { FiGithub, FiLinkedin, FiMail, FiHeart } from 'react-icons/fi';
-import { SiHackerrank, SiLeetcode } from 'react-icons/si';
+import { SiHackerrank, SiLeetcode, SiCodechef } from 'react-icons/si';
 
 const links = [
   { label: 'About',          href: '#about' },
@@ -14,8 +14,9 @@ const links = [
 const socials = [
   { icon: FiGithub,   href: 'https://github.com/chintadavasudharini',          label: 'GitHub'   },
   { icon: FiLinkedin, href: 'https://www.linkedin.com/in/chintada-vasudharini-nov21/',      label: 'LinkedIn' },
-  { icon: SiHackerrank, href: 'https://www.hackerrank.com/profile/Vasudharini_21', label: 'HackerRank' },
   { icon: SiLeetcode, href: 'https://leetcode.com/u/chintadavasudharini/', label: 'LeetCode' },
+  { icon: SiCodechef, href: 'https://www.codechef.com/users/vasudharini',  label: 'CodeChef' },
+  { icon: SiHackerrank, href: 'https://www.hackerrank.com/profile/Vasudharini_21', label: 'HackerRank' },
   { icon: FiMail,     href: 'mailto:chintadavasudharini@gmail.com',     label: 'Email'    },
 ];
 
