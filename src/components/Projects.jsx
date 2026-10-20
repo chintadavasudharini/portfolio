@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { FiGithub, FiCloud, FiImage, FiFileText, FiBook, FiBox, FiExternalLink, FiShield, FiBookOpen } from 'react-icons/fi';
+import { FiGithub, FiCloud, FiImage, FiFileText, FiBook, FiBox, FiExternalLink, FiShield, FiBookOpen, FiCheckSquare, FiDollarSign } from 'react-icons/fi';
 import ProjectDetailsModal from './ProjectDetailsModal.jsx';
 
 const projects = [
@@ -192,6 +192,175 @@ const projects = [
           details: [
             'Leverages PyTorch CPU execution optimization to execute model inference efficiently.',
             'Implements custom Streamlit caching decorators to load the transformer weights into memory once, bypassing slow reload times.'
+          ]
+        }
+      ]
+    }
+  },
+  {
+    title: 'Online Voting System',
+    description:
+      'A high-integrity, multi-tenant digital balloting and election management system designed to eliminate voter fraud, prevent double-voting via composite transactional constraints, enforce strict temporal election lifecycles, and provide an immutable audit trail for certified results.',
+    icon: FiCheckSquare,
+    iconName: 'FiCheckSquare',
+    gradient: 'from-emerald-500 via-teal-500 to-indigo-600',
+    glow: 'rgba(16,185,129,0.3)',
+    tags: ['Java 21', 'Spring Boot 3', 'React 19', 'PostgreSQL', 'Spring Security', 'JWT', 'TypeScript', 'Zustand'],
+    features: [
+      'Zero double-voting via DB composite constraints',
+      'Time-locked election state machine (5 lifecycle phases)',
+      'Role-based access control (Admin, Voter, Candidate) via JWT',
+      'Tamper-resistant cryptographic audit logging',
+    ],
+    github: 'https://github.com/chintadavasudharini/OnlineVotingSystem',
+    demo: '#',
+    badge: 'Enterprise Grade',
+    detailedWriteup: {
+      overview:
+        'The Online Voting System is an enterprise-grade, auditable electronic voting and election management platform built on Java 21 LTS, Spring Boot 3, PostgreSQL 18, and React 19. Designed to bridge high-security backend standards with an intuitive voter experience, the platform guarantees zero double-voting via composite transactional constraints, enforces strict temporal election lifecycles through a deterministic state machine, and provides an immutable cryptographic audit ledger for certified results.',
+      techStack: [
+        { category: 'Backend', tech: 'Java 21 (LTS), Spring Boot 3.3.4, Jakarta EE 10, Hibernate 6.5.3' },
+        { category: 'Frontend', tech: 'React 19, TypeScript 5.x, Vite 8, React Router 7, Zustand 5, Zod' },
+        { category: 'Database', tech: 'PostgreSQL 18, Spring Data JPA with transactional isolation' },
+        { category: 'Security', tech: 'Spring Security 6, Stateless JWT (HMAC-SHA256), BCrypt, RBAC' },
+        { category: 'API & Testing', tech: 'RESTful API (17+ endpoints), JUnit 5 tests, Postman Collection' },
+        { category: 'Architecture', tech: 'Deterministic State Machine, JPA Audit Logger, Virtual Threads' },
+      ],
+      sections: [
+        {
+          title: 'Zero Double-Voting Guarantee & Atomic Balloting',
+          icon: 'FiCheckSquare',
+          details: [
+            'Database-level composite unique constraint on (election_id, voter_id) combined with JPA isolated transactional boundaries prevents duplicate submissions even under concurrent race conditions.',
+            'Multi-layer enforcement: verifies status == VOTING_OPEN, checks !hasVoted(voterId, electionId), and enforces DB schema uniqueness.',
+            'Atomically rejects duplicate vote attempts with HTTP 400 and immediately writes a high-priority audit entry.'
+          ]
+        },
+        {
+          title: 'Time-Locked Election Lifecycle State Machine',
+          icon: 'FiClock',
+          details: [
+            'Dynamic state transitions calculated deterministically from atomic timestamp ranges across 5 non-overlapping phases: UPCOMING, REGISTRATION_OPEN, VOTING_OPEN, COMPLETED, and RESULTS_PUBLISHED.',
+            'Enforces constitutional candidate nomination eligibility (verified voter >= 25 years old) during registration windows.',
+            'Locks balloting strictly to the VOTING_OPEN window; Super Administrators audit and officially certify the winner breakdown.'
+          ]
+        },
+        {
+          title: 'Stateless JWT Security & Strict RBAC',
+          icon: 'FiShield',
+          details: [
+            'Enforces strict authorization boundaries separating Super Administrator (ADMIN), Registered Citizen (VOTER), and Nominated Leader (CANDIDATE).',
+            'HMAC-SHA256 256-bit signed Bearer tokens injected into Spring Security context filter chain with zero server session overhead.',
+            'Stores credentials using adaptive BCrypt hashing; eliminates session fixation risks.'
+          ]
+        },
+        {
+          title: 'Candidate-Voter Lineage & Validation',
+          icon: 'FiUserCheck',
+          details: [
+            'Enforces constitutional age requirement (>=25 years old) and mandates linkage to an existing active voter identity before nomination eligibility.',
+            'Provides dedicated endpoints for enrolling nominations with vision statements, campaign manifestos, and key promises.'
+          ]
+        },
+        {
+          title: 'Tamper-Resistant Cryptographic Auditing',
+          icon: 'FiFileText',
+          details: [
+            'High-throughput JPA audit logger writes an immutable ledger capturing every sensitive event (authentication, nominations, balloting, result certification).',
+            'Stores actor metadata, IP context, timestamps, and action descriptions into dedicated audit tables for compliance and certification inspection.'
+          ]
+        },
+        {
+          title: 'Reactive Client Tier & Postman Test Suite',
+          icon: 'FiLayers',
+          details: [
+            'React 19 + TypeScript frontend with Zustand state store, persistent localStorage caching, and comprehensive input validation via Zod schemas.',
+            'Enterprise Postman collection with pre-configured test scripts that automatically capture JWT Bearer tokens across the full election lifecycle.'
+          ]
+        }
+      ]
+    }
+  },
+  {
+    title: 'SalaryFlow',
+    description:
+      'A production-grade, mathematically grounded salary planning and wealth optimization platform powered by 7 classical computational thinking algorithms, asynchronous FastAPI micro-services, and conversational Google Gemini AI.',
+    icon: FiDollarSign,
+    iconName: 'FiDollarSign',
+    gradient: 'from-violet-600 via-purple-600 to-indigo-600',
+    glow: 'rgba(124,58,237,0.3)',
+    tags: ['Python', 'FastAPI', 'React 18', 'TypeScript', 'Google Gemini AI', 'Firebase', 'Algorithms', 'Tailwind CSS'],
+    features: [
+      '7 Computational Thinking Algorithms (DP, Greedy, D&C, Backtracking)',
+      'Conversational Google Gemini AI advisory engine',
+      'Dynamic 50/30/20 budgeting & 0-1 Knapsack goal optimization',
+      'Multi-tenant Firestore security & offline fallback authentication',
+    ],
+    github: 'https://github.com/chintadavasudharini/SmartSalaryPlanner',
+    demo: '#',
+    badge: 'FinTech · AI',
+    detailedWriteup: {
+      overview:
+        'SalaryFlow is a production-grade, mathematically grounded salary planning and wealth optimization system powered by classical computational thinking algorithms, asynchronous micro-services, and conversational Google Gemini AI. Operating with a strict zero-fake-data policy, it models real-world financial trade-offs between debt amortisation, non-discretionary commitments, liquidity preservation, and discrete goal funding with formal asymptotic guarantees.',
+      techStack: [
+        { category: 'Backend & Computing', tech: 'FastAPI, Python 3.11+, Pydantic v2 (Strict Schema), asyncio, Process/Thread Pool Executors' },
+        { category: 'Frontend Application', tech: 'React 18, TypeScript 5 (Strict Mode), Vite 5, Tailwind CSS, React Router v6, Axios' },
+        { category: 'AI Orchestration', tech: 'Google Gemini Generative AI SDK, isolated backend prompt engineering' },
+        { category: 'Cloud & Database', tech: 'Firebase Cloud Firestore (per-tenant scoping users/{uid}/*), Firebase Auth' },
+        { category: 'Algorithms', tech: '0-1 Knapsack (DP), Greedy 50/30/20, Merge Sort (D&C), Backtracking, Branch & Bound, QuickSort, Binary Search' },
+        { category: 'Testing & QA', tech: 'Pytest (Unit, Integration, E2E), Hypothesis (Property-Based Financial Laws), 80% coverage' },
+      ],
+      sections: [
+        {
+          title: '7 Computational Thinking Algorithms',
+          icon: 'FiCpu',
+          details: [
+            'Dynamic Programming (O(N·W)): Solves 0-1 Knapsack discrete goal maximization to maximize cumulative life-value within monthly surplus.',
+            'Greedy Heuristic (O(N)): Evaluates income vs obligations in dynamic 50/30/20 budgeting, automatically compressing wants when fixed costs exceed 50%.',
+            'Divide & Conquer (O(N log N)) & QuickSort: Recursively partitions transactions into hierarchical trees and sorts expenses by priority.',
+            'Backtracking & Branch & Bound: Explores permutations of loan acceleration orderings while pruning branches that breach liquidity thresholds.',
+            'Binary Search (O(log N)): Performs logarithmic boundary searches over ascending fiscal health thresholds and marginal tax brackets.'
+          ]
+        },
+        {
+          title: 'Conversational Gemini AI Advisory',
+          icon: 'FiZap',
+          details: [
+            'Isolated backend AI orchestration layer using Google\'s Gemini SDK, keeping API secrets and heuristic prompts strictly guarded on the server.',
+            'Generates hyper-personalized, context-aware financial health summaries and savings strategies based on empirical user balance data.'
+          ]
+        },
+        {
+          title: 'Decoupled High-Concurrency Architecture',
+          icon: 'FiActivity',
+          details: [
+            'Engineered with FastAPI, Pydantic v2 validation, asyncio event loops, and ProcessPoolExecutor for CPU-bound algorithmic computation.',
+            'Includes custom execution @timing_decorator, LRU caching, and streaming generators for responsive performance.'
+          ]
+        },
+        {
+          title: 'Strict Zero-Fake-Data & Multi-Tenant Security',
+          icon: 'FiShield',
+          details: [
+            'Zero-Fake-Data Policy: Operates with a clean ledger that computes exclusively on empirical user inputs without synthetic mock data.',
+            'Defense-in-depth security: client bundles never receive server credentials; Firestore read/write operations strictly scoped to users/{uid}/*.',
+            'Graceful offline authentication fallback: generates isolated in-memory/localStorage sessions during disconnected development.'
+          ]
+        },
+        {
+          title: 'Property-Based & Automated Testing Suite',
+          icon: 'FiCheckSquare',
+          details: [
+            '27 automated tests passing with 80% total test coverage across unit, integration, and E2E workflows.',
+            'Property-based verification with Hypothesis proving mathematical invariants (Needs + Wants + Savings = Net Income) across thousands of random portfolios.'
+          ]
+        },
+        {
+          title: 'Bespoke Reactive Frontend UI',
+          icon: 'FiLayout',
+          details: [
+            'Built with React 18, TypeScript 5, Vite, and Tailwind CSS using a bespoke soft purple palette (#EDE9FE, #7C3AED).',
+            'Custom Axios client with automated Firebase Auth bearer token injection, reactive state handling, and Lucide React iconography.'
           ]
         }
       ]
