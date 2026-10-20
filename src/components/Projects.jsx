@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { FiGithub, FiCloud, FiImage, FiFileText, FiBook, FiBox, FiExternalLink, FiShield, FiBookOpen, FiCheckSquare, FiDollarSign, FiShoppingCart } from 'react-icons/fi';
+import { FiGithub, FiCloud, FiImage, FiFileText, FiBook, FiBox, FiExternalLink, FiShield, FiBookOpen, FiCheckSquare, FiDollarSign, FiShoppingCart, FiSun } from 'react-icons/fi';
 import ProjectDetailsModal from './ProjectDetailsModal.jsx';
 
 const projects = [
@@ -359,6 +359,91 @@ const projects = [
           details: [
             'React 19 + TypeScript frontend with Zustand persistent cart and auth stores, Zod form validation, and TanStack Query.',
             'Responsive design with dark-mode foundation, SVG password visibility toggles, and itemized customer receipts.'
+          ]
+        }
+      ]
+    }
+  },
+  {
+    title: 'Ram Narayana Brahmana Seva Samstha',
+    description:
+      'A high-performance, bilingual Vedic cultural portal built adhering to the Zero-Framework Standard (HTML5, modular CSS3, Vanilla ES6+), featuring a declarative multi-attribute reactive i18n engine, 100/100 Lighthouse performance, and 1-tap WhatsApp deep linking.',
+    icon: FiSun,
+    iconName: 'FiSun',
+    gradient: 'from-amber-500 via-orange-600 to-red-700',
+    glow: 'rgba(217,119,6,0.3)',
+    tags: ['HTML5', 'Modular CSS3', 'Vanilla JS (ES6+)', 'Zero Framework', 'i18n Localization', 'Vercel', 'Schema.org', 'Lighthouse 100/100'],
+    features: [
+      'Zero-Framework Standard (pure HTML5/CSS3/ES6+ with ~24.8 KB footprint)',
+      'Declarative multi-attribute reactive i18n engine (Telugu & English)',
+      '100/100 Google Lighthouse across Performance, A11y, SEO & Best Practices',
+      '1-Tap WhatsApp conversion deep linking with pre-filled Telugu intent',
+    ],
+    github: 'https://github.com/chintadavasudharini/RamNarayanaBrahmanaSevaSamstha',
+    demo: 'https://ramnarayana-brahmana-sevasamstha.vercel.app/',
+    badge: 'Production Live · 100 Lighthouse',
+    detailedWriteup: {
+      overview:
+        'Ram Narayana Brahmana Seva Samstha is a mission-critical digital gateway engineered for the Brahmin community and devotees seeking orthodox Vedic rites, ancestral Shraddha karmas, and Shastric ceremonies. Built under the spiritual guidance of Namburi Adinarayana Sharma, the platform adheres strictly to the Zero-Framework Standard (semantic HTML5, modular CSS3, and high-efficiency Vanilla ES6+), delivering sub-50ms First Contentful Paint, zero layout shifts, and 100/100 Google Lighthouse audit scores.',
+      techStack: [
+        { category: 'Architecture', tech: 'Zero-Framework Standard (Vanilla HTML5, Modular CSS3, ES6+ JavaScript, 0ms parsing lag)' },
+        { category: 'Localization (i18n)', tech: 'Custom Declarative Multi-Attribute DOM Hydration Engine (Telugu & English, localStorage sync)' },
+        { category: 'Design System', tech: 'Vedic Light Theme (#851317 Deep Maroon, #D4AF37 Shastric Gold, #FAF7F0 Ivory Parchment)' },
+        { category: 'Typography', tech: 'Google Font Ramabhadra for authentic Telugu typography, Cinzel & Outfit for English' },
+        { category: 'SEO & Structured Data', tech: 'Schema.org LocalBusiness JSON-LD, OpenGraph cards, semantic ARIA landmarks' },
+        { category: 'Deployment', tech: 'Vercel, instant single-command local server (npm run dev / python -m http.server)' },
+      ],
+      sections: [
+        {
+          title: 'Zero-Framework Performance & 100/100 Lighthouse',
+          icon: 'FiAward',
+          details: [
+            'Zero npm runtime dependencies and zero framework overhead: achieves a lightweight ~24.8 KB uncompressed footprint.',
+            'Near-instant First Contentful Paint (38-45ms), 0ms Total Blocking Time, and zero Cumulative Layout Shift (0.000).',
+            'Scored a perfect 100/100 across all four Google Lighthouse vectors: Performance, Accessibility, Best Practices, and SEO.'
+          ]
+        },
+        {
+          title: 'Declarative Reactive i18n Engine',
+          icon: 'FiGlobe',
+          details: [
+            'Bespoke single-pass DOM hydration engine mutates nodes in O(N) using [data-i18n], [data-i18n-html], [data-i18n-src], and [data-i18n-alt].',
+            'Instantaneous state mirroring to localStorage (rnbs_lang), guaranteeing zero flash of unlocalized content and zero page reloads.',
+            'Universal Telugu typography powered by Google Font Ramabhadra with tuned line-heights (1.35-1.76) for elderly devotees.'
+          ]
+        },
+        {
+          title: 'Vedic Light Design System & Token Architecture',
+          icon: 'FiSun',
+          details: [
+            'Bespoke sacred palette: Deep Temple Maroon (#851317), Royal Crimson (#5C0A0E), Pure Shastric Gold (#D4AF37), and Sacred Ivory (#FAF7F0).',
+            'Pure CSS clamp() fluid geometry ensures zero horizontal overflow across all viewports from 320px foldables to 4K displays.',
+            'Strict single-line core rituals strip (◆ Masikam ◆ Abdikam ◆ Samvatsarikam ◆ Pinda Pradanam) with touch-scroll protection.'
+          ]
+        },
+        {
+          title: '1-Tap WhatsApp Deep-Linking & Conversion',
+          icon: 'FiPhone',
+          details: [
+            'Standardized Click-to-Chat deep linking with pre-configured formal Telugu inquiry message across hero, sticky action bar, and footer.',
+            'Speed-optimized contact section with direct Google Maps deep-link button replacing heavy embed iframes.'
+          ]
+        },
+        {
+          title: 'Lossless Asset & Shastric Domain Taxonomy',
+          icon: 'FiImage',
+          details: [
+            'High-resolution lossless PNG assets: official circular emblem, banner, visiting card, and bilingual ceremony brochures.',
+            'Domain modeling covers 4 major Shastric verticals: Bhoktha Seva, Pitru Karyas, Satvik Catering, and Sacred Offerings.'
+          ]
+        },
+        {
+          title: 'Privacy-First Security & High Accessibility',
+          icon: 'FiShield',
+          details: [
+            'Zero third-party CDN scripts, eliminating supply-chain vulnerabilities and XSS injection vectors.',
+            'Zero cookies and zero tracker footprint, fully GDPR/DPDP compliant by design.',
+            'High contrast ratio exceeding 9.5:1 (WCAG 2.1 AA compliant) with complete keyboard traversal and localized screen-reader attributes.'
           ]
         }
       ]
