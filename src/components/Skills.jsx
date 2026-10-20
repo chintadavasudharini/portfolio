@@ -98,6 +98,7 @@ const skillGroups = [
       { name: 'MySQL',    icon: SiMysql,    color: '#4479a1' },
       { name: 'MongoDB',  icon: SiMongodb,  color: '#47a248' },
       { name: 'AWS',      icon: FaAws,      color: '#ff9900' },
+      { name: 'Docker',   icon: FaDocker,   color: '#2496ed' },
     ],
   },
   {
@@ -195,6 +196,7 @@ export default function Skills() {
               { name: 'VS Code', icon: FaCode },
               { name: 'Git', icon: FaGitAlt },
               { name: 'GitHub', icon: FaGithub },
+              { name: 'Docker', icon: FaDocker },
               { name: 'Postman', icon: SiPostman },
               { name: 'Power BI', icon: FaChartPie },
               { name: 'Excel', icon: FaFileExcel },
