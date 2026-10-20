@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { FiGithub, FiCloud, FiImage, FiFileText, FiBook, FiBox, FiExternalLink, FiShield, FiBookOpen, FiCheckSquare, FiDollarSign } from 'react-icons/fi';
+import { FiGithub, FiCloud, FiImage, FiFileText, FiBook, FiBox, FiExternalLink, FiShield, FiBookOpen, FiCheckSquare, FiDollarSign, FiShoppingCart } from 'react-icons/fi';
 import ProjectDetailsModal from './ProjectDetailsModal.jsx';
 
 const projects = [
@@ -276,6 +276,89 @@ const projects = [
           details: [
             'React 19 + TypeScript frontend with Zustand state store, persistent localStorage caching, and comprehensive input validation via Zod schemas.',
             'Enterprise Postman collection with pre-configured test scripts that automatically capture JWT Bearer tokens across the full election lifecycle.'
+          ]
+        }
+      ]
+    }
+  },
+  {
+    title: 'SmartCart',
+    description:
+      'A modern, high-performance full-stack e-commerce solution architected for high transaction throughput, resilient post-payment processing, non-blocking asynchronous background jobs, and live STOMP WebSocket telemetry for administrators.',
+    icon: FiShoppingCart,
+    iconName: 'FiShoppingCart',
+    gradient: 'from-blue-600 via-indigo-600 to-cyan-500',
+    glow: 'rgba(59,130,246,0.3)',
+    tags: ['Java 21', 'Spring Boot 4', 'React 19', 'PostgreSQL', 'Razorpay', 'WebSocket & STOMP', 'TypeScript', 'Zustand'],
+    features: [
+      'Asynchronous post-payment pipeline (@Async Email, PDF invoice, Notifications)',
+      'Real-time STOMP WebSocket telemetry & live job monitoring',
+      'Executive dark-theme admin suite with dual-portal route isolation',
+      'Cryptographic Razorpay HMAC verification with idempotency protection',
+    ],
+    github: 'https://github.com/chintadavasudharini/SmartCart',
+    demo: '#',
+    badge: 'Spring Boot 4 · React 19',
+    detailedWriteup: {
+      overview:
+        'SmartCart is an end-to-end full-stack e-commerce platform architected for high transaction throughput, resilient post-payment processing, and real-time observability. Built on Java 21 LTS, Spring Boot 4, and React 19 with TypeScript, it implements a decoupled client-server architecture with non-blocking asynchronous background workers for email notifications and OpenPDF invoice compilation, combined with full-duplex STOMP WebSocket messaging for live administrative telemetry.',
+      techStack: [
+        { category: 'Backend Core', tech: 'Java 21 (LTS), Spring Boot 4.1.1, Jakarta EE, Hibernate ORM' },
+        { category: 'Frontend SPA', tech: 'React 19, TypeScript 5.x, Vite 8, Zustand, TanStack Query, Tailwind CSS' },
+        { category: 'Real-Time & Async', tech: 'Spring WebSocket, STOMP (@stomp/stompjs), Spring @Async ThreadPoolExecutor' },
+        { category: 'Payments & Billing', tech: 'Razorpay Java SDK (HMAC-SHA256 signature verification), OpenPDF (2.0.3)' },
+        { category: 'Security & Auth', tech: 'Spring Security 6, Stateless JWT (HMAC-SHA256), BCrypt (cost 10), Dual-Portal RBAC' },
+        { category: 'Database & Mail', tech: 'PostgreSQL 14+, Spring Data JPA, JavaMailSender (SMTP)' },
+      ],
+      sections: [
+        {
+          title: 'Post-Payment Asynchronous Pipeline',
+          icon: 'FiZap',
+          details: [
+            'Non-blocking checkout: immediately returns HTTP 200 upon cryptographic Razorpay HMAC verification while offloading heavy I/O to background workers.',
+            'Three parallel @Async workers execute: Email worker (order confirmation via SMTP), Invoice worker (branded A4 PDF via OpenPDF), and Notification worker.',
+            'Guards against duplicate deliveries with idempotency verification queries and state machine transitions (PENDING -> PROCESSING -> COMPLETED/FAILED).'
+          ]
+        },
+        {
+          title: 'Live STOMP WebSocket Telemetry',
+          icon: 'FiRadio',
+          details: [
+            'Full-duplex STOMP over WebSocket broker broadcasts worker state transitions in real time to /topic/jobs.',
+            'Executive admin console streams live job metrics, status badges, and provides manual one-click retry controls for failed jobs.'
+          ]
+        },
+        {
+          title: 'Executive Admin Suite & Dual-Portal Auth',
+          icon: 'FiShield',
+          details: [
+            'Dedicated Executive Midnight Slate admin theme (.admin-theme) consolidated strictly under the /admin routing tree.',
+            'Airtight dual-portal separation: standard customer portal (/signin) intercepts admin logins, and /admin/login explicitly rejects standard user accounts.',
+            'Role-aware Axios 401 interceptor automatically routes expired admin sessions back to /admin/login instead of customer sign-in.'
+          ]
+        },
+        {
+          title: 'Razorpay Payments & Cryptographic Verification',
+          icon: 'FiCreditCard',
+          details: [
+            'Server-side HMAC-SHA256 signature verification prevents client-side price or status tampering.',
+            'Transactional database boundaries update payment and order states to PAID in a single atomic commit.'
+          ]
+        },
+        {
+          title: 'Complete Inventory & Catalog Management',
+          icon: 'FiBox',
+          details: [
+            'Real-time inventory decrementing and catalog operations (insert with live preview, update stock levels, delete listings).',
+            'Financial metrics monitoring including gross revenue, paid order count, and average order value (AOV).'
+          ]
+        },
+        {
+          title: 'Reactive Client Tier with React 19 & TypeScript',
+          icon: 'FiLayers',
+          details: [
+            'React 19 + TypeScript frontend with Zustand persistent cart and auth stores, Zod form validation, and TanStack Query.',
+            'Responsive design with dark-mode foundation, SVG password visibility toggles, and itemized customer receipts.'
           ]
         }
       ]

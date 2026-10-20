@@ -81,7 +81,7 @@ export default function About() {
             <div className="grid grid-cols-3 gap-4 w-full">
               {[
                 { value: '2+', label: 'Internships' },
-                { value: '9+', label: 'Projects' },
+                { value: '10+', label: 'Projects' },
                 { value: '4+', label: 'Certs' },
               ].map(s => (
                 <div key={s.label} className="glass-card p-4 text-center">
