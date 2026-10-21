@@ -6,6 +6,17 @@ import { FaGraduationCap, FaBuildingColumns, FaSchool } from 'react-icons/fa6';
 
 const education = [
   {
+    degree: 'Master of Technology (M.Tech) – Artificial Intelligence and Data Science',
+    institution: 'Koneru Lakshmaiah University',
+    location: 'Vijayawada, Andhra Pradesh',
+    period: '2026 – 2028',
+    score: 'CGPA: 8.9/10',
+    scoreLabel: 'CGPA',
+    icon: FaGraduationCap,
+    color: 'from-violet-500 to-indigo-600',
+    tags: ['AI & Machine Learning', 'Data Science', 'Advanced Algorithms', 'Deep Learning'],
+  },
+  {
     degree: 'Bachelor of Technology (B.Tech) – Computer Science and Engineering',
     institution: 'Koneru Lakshmaiah University',
     location: 'Vijayawada, Andhra Pradesh',

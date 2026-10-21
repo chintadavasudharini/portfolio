@@ -10,7 +10,7 @@ import {
   SiFlask, SiMysql, SiMongodb, SiStreamlit, SiJupyter, SiPostman,
   SiHackerrank, SiLeetcode, SiCodechef, SiVercel, SiRender, SiTensorflow,
   SiScikitlearn, SiPandas, SiNumpy, SiPytorch, SiGooglecolab, SiCplusplus,
-  SiSpringboot
+  SiSpringboot, SiPostgresql
 } from 'react-icons/si';
 import { FiCpu, FiCode as FiCodeIcon, FiZap } from 'react-icons/fi';
 import { DiJava } from 'react-icons/di';
@@ -95,7 +95,8 @@ const skillGroups = [
     color: 'from-sky-500/20 to-sky-500/5',
     border: 'border-sky-500/20',
     skills: [
-      { name: 'MySQL',    icon: SiMysql,    color: '#4479a1' },
+      { name: 'MySQL',      icon: SiMysql,      color: '#4479a1' },
+      { name: 'PostgreSQL', icon: SiPostgresql, color: '#336791' },
       { name: 'MongoDB',  icon: SiMongodb,  color: '#47a248' },
       { name: 'AWS',      icon: FaAws,      color: '#ff9900' },
       { name: 'Docker',   icon: FaDocker,   color: '#2496ed' },

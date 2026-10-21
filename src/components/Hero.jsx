@@ -100,8 +100,8 @@ export default function Hero({ onOpenResume }) {
           transition={{ delay: 0.55 }}
           className="text-[var(--text-muted)] text-base md:text-lg max-w-xl mx-auto mb-10 leading-relaxed"
         >
-          B.Tech CSE graduate from KL University crafting scalable web apps,
-          cloud-native solutions, and intelligent AI systems.
+          CSE graduate pursuing M.Tech in AI & Data Science at KL University,
+          crafting scalable web applications, cloud-native architectures, and intelligent ML systems.
         </motion.p>
 
         {/* CTA row */}
