@@ -91,13 +91,20 @@ const skillGroups = [
     ],
   },
   {
-    category: 'Databases & Cloud',
+    category: 'Databases',
     color: 'from-sky-500/20 to-sky-500/5',
     border: 'border-sky-500/20',
     skills: [
       { name: 'MySQL',      icon: SiMysql,      color: '#4479a1' },
       { name: 'PostgreSQL', icon: SiPostgresql, color: '#336791' },
-      { name: 'MongoDB',  icon: SiMongodb,  color: '#47a248' },
+      { name: 'MongoDB',    icon: SiMongodb,    color: '#47a248' },
+    ],
+  },
+  {
+    category: 'Cloud',
+    color: 'from-orange-500/20 to-orange-500/5',
+    border: 'border-orange-500/20',
+    skills: [
       { name: 'AWS',      icon: FaAws,      color: '#ff9900' },
       { name: 'Docker',   icon: FaDocker,   color: '#2496ed' },
     ],
