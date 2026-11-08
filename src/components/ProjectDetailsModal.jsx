@@ -156,6 +156,30 @@ export default function ProjectDetailsModal({ project, isOpen, onClose }) {
                         Launch Live Application
                       </a>
                     )}
+                    {project.article && (
+                      <a
+                        href={project.article}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-outline w-full justify-center flex items-center gap-2 cursor-pointer text-cyan-400 hover:text-cyan-300 border-cyan-500/30 hover:border-cyan-500/60"
+                        aria-label="Read Technical Article"
+                      >
+                        <Icons.FiBookOpen size={16} />
+                        LinkedIn Architecture Article
+                      </a>
+                    )}
+                    {project.apiDocs && (
+                      <a
+                        href={project.apiDocs}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-outline w-full justify-center flex items-center gap-2 cursor-pointer text-emerald-400 hover:text-emerald-300 border-emerald-500/30 hover:border-emerald-500/60"
+                        aria-label="Production API Base"
+                      >
+                        <Icons.FiServer size={16} />
+                        Production API (Render)
+                      </a>
+                    )}
                   </div>
                 </div>
 

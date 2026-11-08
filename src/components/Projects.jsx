@@ -198,33 +198,37 @@ const projects = [
     }
   },
   {
-    title: 'Online Voting System',
+    title: 'SecureVote (Online Voting System)',
     description:
-      'A high-integrity, multi-tenant digital balloting and election management system designed to eliminate voter fraud, prevent double-voting via composite transactional constraints, enforce strict temporal election lifecycles, and provide an immutable audit trail for certified results.',
+      'A high-integrity, multi-tenant digital balloting and election governance system designed to eliminate voter fraud, prevent double-voting via composite transactional constraints, enforce strict temporal election lifecycles, verify candidate nomination security deposits via Razorpay, and provide an immutable audit trail for certified results.',
     icon: FiCheckSquare,
     iconName: 'FiCheckSquare',
     gradient: 'from-emerald-500 via-teal-500 to-indigo-600',
     glow: 'rgba(16,185,129,0.3)',
-    tags: ['Java 21', 'Spring Boot 3', 'React 19', 'PostgreSQL', 'Spring Security', 'JWT', 'TypeScript', 'Zustand'],
+    tags: ['Java 21', 'Spring Boot 3.3', 'React 19', 'PostgreSQL', 'Razorpay', 'Spring Security', 'JWT', 'TypeScript', 'Docker', 'Vercel', 'Render'],
     features: [
-      'Zero double-voting via DB composite constraints',
-      'Time-locked election state machine (5 lifecycle phases)',
-      'Role-based access control (Admin, Voter, Candidate) via JWT',
-      'Tamper-resistant cryptographic audit logging',
+      'Zero double-voting via DB composite constraints (election_id, voter_id)',
+      'Time-locked election state machine (5 dynamic lifecycle phases)',
+      'Razorpay financial verification for candidate nomination security deposits',
+      'Role-based access control (Admin, Voter, Candidate) via 256-bit JWTs',
+      'Asynchronous HTML onboarding email dispatch via Gmail SMTP & TLS',
     ],
     github: 'https://github.com/chintadavasudharini/OnlineVotingSystem',
-    demo: '#',
-    badge: 'Enterprise Grade',
+    demo: 'https://securevote-onlinevotingsystem.vercel.app/',
+    article: 'https://www.linkedin.com/pulse/online-voting-system-chintada-vasudharini-wrhic/',
+    apiDocs: 'https://securevote-onlinevotingsystem-backend.onrender.com/',
+    badge: 'Production Live · Vercel + Render',
     detailedWriteup: {
       overview:
-        'The Online Voting System is an enterprise-grade, auditable electronic voting and election management platform built on Java 21 LTS, Spring Boot 3, PostgreSQL 18, and React 19. Designed to bridge high-security backend standards with an intuitive voter experience, the platform guarantees zero double-voting via composite transactional constraints, enforces strict temporal election lifecycles through a deterministic state machine, and provides an immutable cryptographic audit ledger for certified results.',
+        'SecureVote is an enterprise-grade, auditable electronic voting and electoral governance platform built on Java 21 LTS, Spring Boot 3.3.4, PostgreSQL 16/18, and React 19. Deployed live with frontend on Vercel and backend containerized on Render, it guarantees zero double-voting via composite transactional constraints, enforces strict temporal election lifecycles through a deterministic state machine, verifies candidate nomination security deposits via Razorpay, and provides an immutable cryptographic audit ledger for certified election outcomes.',
       techStack: [
-        { category: 'Backend', tech: 'Java 21 (LTS), Spring Boot 3.3.4, Jakarta EE 10, Hibernate 6.5.3' },
-        { category: 'Frontend', tech: 'React 19, TypeScript 5.x, Vite 8, React Router 7, Zustand 5, Zod' },
-        { category: 'Database', tech: 'PostgreSQL 18, Spring Data JPA with transactional isolation' },
-        { category: 'Security', tech: 'Spring Security 6, Stateless JWT (HMAC-SHA256), BCrypt, RBAC' },
-        { category: 'API & Testing', tech: 'RESTful API (17+ endpoints), JUnit 5 tests, Postman Collection' },
-        { category: 'Architecture', tech: 'Deterministic State Machine, JPA Audit Logger, Virtual Threads' },
+        { category: 'Backend Core', tech: 'Java 21 (LTS), Spring Boot 3.3.4, Jakarta EE 10, Hibernate 6.5.3, HikariCP' },
+        { category: 'Frontend SPA', tech: 'React 19.2, TypeScript 5.x, Vite 8 (Rolldown), Zustand 5, Zod 4' },
+        { category: 'Persistence', tech: 'PostgreSQL 16/18, Spring Data JPA with transactional isolation' },
+        { category: 'Security & Auth', tech: 'Spring Security 6, Stateless JWT (JJWT 0.12.6, HMAC-SHA256), BCrypt, RBAC' },
+        { category: 'Payment Gateway', tech: 'Razorpay Orders API (₹100 nomination deposit) with server-side HMAC-SHA256 signature verification' },
+        { category: 'Email Subsystem', tech: 'Spring Boot Mail (JavaMailSender), Gmail SMTP (TLS 587), asynchronous CompletableFuture dispatch' },
+        { category: 'Deployment', tech: 'Vercel (React SPA with rewrite rules), Render (Multi-Stage Docker Java 21 Web Service + Managed PostgreSQL)' },
       ],
       sections: [
         {
@@ -237,45 +241,48 @@ const projects = [
           ]
         },
         {
-          title: 'Time-Locked Election Lifecycle State Machine',
+          title: 'Deterministic Temporal State Machine & Dynamic Tie Detection',
           icon: 'FiClock',
           details: [
-            'Dynamic state transitions calculated deterministically from atomic timestamp ranges across 5 non-overlapping phases: UPCOMING, REGISTRATION_OPEN, VOTING_OPEN, COMPLETED, and RESULTS_PUBLISHED.',
-            'Enforces constitutional candidate nomination eligibility (verified voter >= 25 years old) during registration windows.',
-            'Locks balloting strictly to the VOTING_OPEN window; Super Administrators audit and officially certify the winner breakdown.'
+            'Dynamic state transitions calculated deterministically on-the-fly from atomic UTC timestamp ranges across 5 phases: UPCOMING, REGISTRATION_OPEN, VOTING_OPEN, COMPLETED, and RESULTS_PUBLISHED.',
+            'Results certification renders single winners in a green Elected Candidate card (🟩) and automatically isolates multi-candidate deadlocks in a yellow Result: Tie card (🟨) detailing exact tallies.',
+            'Enforces constitutional candidate nomination eligibility (verified voter >= 25 years old) during registration windows.'
           ]
         },
         {
-          title: 'Stateless JWT Security & Strict RBAC',
+          title: 'Candidate Nomination & Razorpay Payment Architecture',
+          icon: 'FiCreditCard',
+          details: [
+            'Requires an official nomination security deposit of ₹100.00 (10000 paise) before candidacy confirmation.',
+            'Server-side order generation and HMAC-SHA256 cryptographic signature verification prevent payment spoofing or forged receipts.',
+            'Enforces 1:1 lineage to an existing verified voter identity (>= 25 yrs) before nomination elevation.'
+          ]
+        },
+        {
+          title: 'Stateless 256-Bit JWT Security & Strict Dual-Portal RBAC',
           icon: 'FiShield',
           details: [
             'Enforces strict authorization boundaries separating Super Administrator (ADMIN), Registered Citizen (VOTER), and Nominated Leader (CANDIDATE).',
             'HMAC-SHA256 256-bit signed Bearer tokens injected into Spring Security context filter chain with zero server session overhead.',
-            'Stores credentials using adaptive BCrypt hashing; eliminates session fixation risks.'
+            'Dedicated role-isolated login portals (/login?role=voter, /login?role=candidate, /admin) preventing cross-persona credential access.'
           ]
         },
         {
-          title: 'Candidate-Voter Lineage & Validation',
-          icon: 'FiUserCheck',
+          title: 'Asynchronous Centralized Email Notification Subsystem',
+          icon: 'FiMail',
           details: [
-            'Enforces constitutional age requirement (>=25 years old) and mandates linkage to an existing active voter identity before nomination eligibility.',
-            'Provides dedicated endpoints for enrolling nominations with vision statements, campaign manifestos, and key promises.'
+            'Powered by Spring Boot Mail and Gmail SMTP over TLS 587 with Google App Passwords.',
+            'Dispatches responsive HTML onboarding notifications with auto-generated Voter/Candidate IDs asynchronously via CompletableFuture without blocking DB transactions.',
+            'Supports 30-second cryptographic OTP verification and 1-minute password reset recovery tokens.'
           ]
         },
         {
-          title: 'Tamper-Resistant Cryptographic Auditing',
-          icon: 'FiFileText',
+          title: 'Tamper-Resistant Cryptographic Auditing & Cloud Deployment',
+          icon: 'FiServer',
           details: [
-            'High-throughput JPA audit logger writes an immutable ledger capturing every sensitive event (authentication, nominations, balloting, result certification).',
-            'Stores actor metadata, IP context, timestamps, and action descriptions into dedicated audit tables for compliance and certification inspection.'
-          ]
-        },
-        {
-          title: 'Reactive Client Tier & Postman Test Suite',
-          icon: 'FiLayers',
-          details: [
-            'React 19 + TypeScript frontend with Zustand state store, persistent localStorage caching, and comprehensive input validation via Zod schemas.',
-            'Enterprise Postman collection with pre-configured test scripts that automatically capture JWT Bearer tokens across the full election lifecycle.'
+            'High-throughput JPA audit logger writes an immutable ledger capturing actor IDs, IP context, timestamps, and action descriptions into dedicated audit tables.',
+            'Containerized with a multi-stage Docker build (Maven build + lightweight Eclipse Temurin 21 JRE runtime) deployed on Render.',
+            'Production React 19 frontend hosted on Vercel with SPA refresh routing guards and Zustand persistent hydration.'
           ]
         }
       ]
