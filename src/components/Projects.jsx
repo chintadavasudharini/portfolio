@@ -198,20 +198,20 @@ const projects = [
     }
   },
   {
-    title: 'SecureVote (Online Voting System)',
+    title: 'SecureVote — Enterprise Online Voting System',
     description:
-      'A high-integrity, multi-tenant digital balloting and election governance system designed to eliminate voter fraud, prevent double-voting via composite transactional constraints, enforce strict temporal election lifecycles, verify candidate nomination security deposits via Razorpay, and provide an immutable audit trail for certified results.',
+      'High-integrity, auditable electronic voting and electoral governance platform built on Java 21 LTS, Spring Boot 3.3.4, and React 19. Features dual-profile admin security (dev vs strict prod), zero-footprint ephemeral in-memory OTPs (30s TTL in ConcurrentHashMap, 0 DB tables), Razorpay nomination deposit verification, composite database double-voting barriers UNIQUE(election_id, voter_id), and an asynchronous 16-template Thymeleaf email engine with complete ballot secrecy.',
     icon: FiCheckSquare,
     iconName: 'FiCheckSquare',
     gradient: 'from-emerald-500 via-teal-500 to-indigo-600',
     glow: 'rgba(16,185,129,0.3)',
-    tags: ['Java 21', 'Spring Boot 3.3', 'React 19', 'PostgreSQL', 'Razorpay', 'Spring Security', 'JWT', 'TypeScript', 'Docker', 'Vercel', 'Render'],
+    tags: ['Java 21 LTS', 'Spring Boot 3.3.4', 'React 19', 'PostgreSQL 15+', 'Razorpay SDK', 'Spring Security 6', 'Stateless JWT', 'Docker Multi-Stage', 'Thymeleaf', 'Vercel', 'Render'],
     features: [
-      'Zero double-voting via DB composite constraints (election_id, voter_id)',
-      'Time-locked election state machine (5 dynamic lifecycle phases)',
-      'Razorpay financial verification for candidate nomination security deposits',
-      'Role-based access control (Admin, Voter, Candidate) via 256-bit JWTs',
-      'Asynchronous HTML onboarding email dispatch via Gmail SMTP & TLS',
+      'Dual-profile Admin security (dev admin/admin vs prod mandatory env vars with startup halt)',
+      'Zero-footprint ephemeral OTPs (30s TTL, 10s eviction in ConcurrentHashMap, 0 DB tables)',
+      'Database-level concurrency barrier against double-voting: UNIQUE(election_id, voter_id)',
+      'Razorpay payment gateway integration for ₹100 candidate nomination deposits with HMAC-SHA256 verification',
+      'Asynchronous email engine: 16 responsive Thymeleaf templates & 15 notification triggers with complete ballot secrecy',
     ],
     github: 'https://github.com/chintadavasudharini/OnlineVotingSystem',
     demo: 'https://securevote-onlinevotingsystem.vercel.app/',
@@ -220,69 +220,70 @@ const projects = [
     badge: 'Production Live · Vercel + Render',
     detailedWriteup: {
       overview:
-        'SecureVote is an enterprise-grade, auditable electronic voting and electoral governance platform built on Java 21 LTS, Spring Boot 3.3.4, PostgreSQL 16/18, and React 19. Deployed live with frontend on Vercel and backend containerized on Render, it guarantees zero double-voting via composite transactional constraints, enforces strict temporal election lifecycles through a deterministic state machine, verifies candidate nomination security deposits via Razorpay, and provides an immutable cryptographic audit ledger for certified election outcomes.',
+        'SecureVote is an enterprise-grade, auditable electronic voting and electoral governance platform engineered during an M.Tech in Artificial Intelligence & Data Science academic hackathon at KL University (KLU), Vijayawada. Built on Java 21 LTS, Spring Boot 3.3.4, PostgreSQL 15+, and React 19, the platform resolves real-world voting vulnerabilities via a deterministic temporal state engine, physical database composite uniqueness against double-voting, server-side Razorpay payment orchestration for ₹100 candidate nomination deposits, zero-footprint ephemeral in-memory OTP verification (30s TTL, 0 DB tables), dual-profile Admin governance, and an asynchronous 16-template Thymeleaf email notification subsystem preserving absolute ballot secrecy.',
       techStack: [
-        { category: 'Backend Core', tech: 'Java 21 (LTS), Spring Boot 3.3.4, Jakarta EE 10, Hibernate 6.5.3, HikariCP' },
-        { category: 'Frontend SPA', tech: 'React 19.2, TypeScript 5.x, Vite 8 (Rolldown), Zustand 5, Zod 4' },
-        { category: 'Persistence', tech: 'PostgreSQL 16/18, Spring Data JPA with transactional isolation' },
-        { category: 'Security & Auth', tech: 'Spring Security 6, Stateless JWT (JJWT 0.12.6, HMAC-SHA256), BCrypt, RBAC' },
-        { category: 'Payment Gateway', tech: 'Razorpay Orders API (₹100 nomination deposit) with server-side HMAC-SHA256 signature verification' },
-        { category: 'Email Subsystem', tech: 'Spring Boot Mail (JavaMailSender), Gmail SMTP (TLS 587), asynchronous CompletableFuture dispatch' },
-        { category: 'Deployment', tech: 'Vercel (React SPA with rewrite rules), Render (Multi-Stage Docker Java 21 Web Service + Managed PostgreSQL)' },
+        { category: 'Backend Core', tech: 'Java 21 (LTS), Spring Boot 3.3.4, Jakarta EE 10, Hibernate 6.5.3, HikariCP, Maven 3.9.6' },
+        { category: 'Frontend SPA', tech: 'React 19.0.0, TypeScript 5.5, Vite 8, Zustand 5 (Persisted), React Router DOM 7, Zod 3.23' },
+        { category: 'Persistence', tech: 'PostgreSQL 15+ (Strict 5-table baseline: users, elections, candidate_registrations, votes, audit_logs)' },
+        { category: 'Security & Auth', tech: 'Spring Security 6.3, Stateless 256-bit JWT (JJWT 0.12.6), BCrypt (cost 10), Dual-Profile Admin (dev vs prod)' },
+        { category: 'Ephemeral Security', tech: 'ConcurrentHashMap in-memory OTP engine (30s TTL, 10s eviction scheduler, 0 DB tables, SHA-256)' },
+        { category: 'Payment Gateway', tech: 'Razorpay Java SDK 1.4.3 (₹100 deposit) with server-side HMAC-SHA256 signature verification' },
+        { category: 'Email Subsystem', tech: 'Spring Boot Mail (JavaMailSender), 16 Thymeleaf responsive templates, 15 triggers, Gmail SMTP (TLS 587)' },
+        { category: 'Cloud & DevOps', tech: 'Docker Multi-Stage (Temurin 21 JRE), Render (Web Service + Managed Postgres), Vercel (Edge CDN, SPA Rewrites)' },
       ],
       sections: [
         {
-          title: 'Zero Double-Voting Guarantee & Atomic Balloting',
+          title: 'Zero Double-Voting Guarantee & Relational Invariants',
           icon: 'FiCheckSquare',
           details: [
-            'Database-level composite unique constraint on (election_id, voter_id) combined with JPA isolated transactional boundaries prevents duplicate submissions even under concurrent race conditions.',
-            'Multi-layer enforcement: verifies status == VOTING_OPEN, checks !hasVoted(voterId, electionId), and enforces DB schema uniqueness.',
-            'Atomically rejects duplicate vote attempts with HTTP 400 and immediately writes a high-priority audit entry.'
+            'Mathematical single-vote integrity: pushes the single-ballot invariant into PostgreSQL via composite unique constraint UNIQUE(election_id, voter_id).',
+            'Multi-layer enforcement: verifies election status is strictly VOTING_OPEN, checks !hasVoted(voterId, electionId) in JPA, and enforces database-level uniqueness.',
+            'Atomically rejects concurrent repeat attempts with HTTP 400 and immediately writes an immutable audit log entry.'
           ]
         },
         {
-          title: 'Deterministic Temporal State Machine & Dynamic Tie Detection',
-          icon: 'FiClock',
+          title: 'Dual-Profile Admin Security & Ephemeral In-Memory OTPs',
+          icon: 'FiShield',
           details: [
-            'Dynamic state transitions calculated deterministically on-the-fly from atomic UTC timestamp ranges across 5 phases: UPCOMING, REGISTRATION_OPEN, VOTING_OPEN, COMPLETED, and RESULTS_PUBLISHED.',
-            'Results certification renders single winners in a green Elected Candidate card (🟩) and automatically isolates multi-candidate deadlocks in a yellow Result: Tie card (🟨) detailing exact tallies.',
-            'Enforces constitutional candidate nomination eligibility (verified voter >= 25 years old) during registration windows.'
+            'Dual-Profile Admin: dev profile allows local demo admin/admin; prod profile strictly enforces ADMIN_USERNAME and ADMIN_PASSWORD from backend env vars, halts startup if missing or set to admin/admin.',
+            'Zero-Footprint Ephemeral Security: 6-char cryptographic OTPs (30s TTL) and password reset tokens (60s TTL) live solely in Java ConcurrentHashMap with 10-second automated eviction. Zero database tables added.',
+            'Brute-force protection: enforces a maximum threshold of 5 attempts before automatically invalidating the session OTP.'
           ]
         },
         {
           title: 'Candidate Nomination & Razorpay Payment Architecture',
           icon: 'FiCreditCard',
           details: [
-            'Requires an official nomination security deposit of ₹100.00 (10000 paise) before candidacy confirmation.',
-            'Server-side order generation and HMAC-SHA256 cryptographic signature verification prevent payment spoofing or forged receipts.',
-            'Enforces 1:1 lineage to an existing verified voter identity (>= 25 yrs) before nomination elevation.'
+            'Candidates must deposit an official nomination security deposit of ₹100.00 (10000 paise) via Razorpay Orders before nomination confirmation.',
+            'Server-side HMAC-SHA256 signature verification prevents client tampering, forged payment IDs, or fake transaction receipts.',
+            'Constitutional lineage: candidate registration requires verified voter lineage with age >= 25 years and 1:1 account linkage.'
           ]
         },
         {
-          title: 'Stateless 256-Bit JWT Security & Strict Dual-Portal RBAC',
-          icon: 'FiShield',
+          title: 'Deterministic State Machine & Dynamic Tie Detection',
+          icon: 'FiClock',
           details: [
-            'Enforces strict authorization boundaries separating Super Administrator (ADMIN), Registered Citizen (VOTER), and Nominated Leader (CANDIDATE).',
-            'HMAC-SHA256 256-bit signed Bearer tokens injected into Spring Security context filter chain with zero server session overhead.',
-            'Dedicated role-isolated login portals (/login?role=voter, /login?role=candidate, /admin) preventing cross-persona credential access.'
+            'Dynamic temporal transitions calculated on-the-fly from atomic UTC timestamp ranges across 5 phases: UPCOMING, REGISTRATION_OPEN, VOTING_OPEN, COMPLETED, and RESULTS_PUBLISHED.',
+            'Results certification dynamically detects outcome: single highest tally renders inside a Green Elected Candidate card (🟩), while deadlocks are segregated inside a Yellow Result: Tie card (🟨) detailing tied tallies.',
+            'Strict role-segregated login: /login?role=voter (Voter ID), /login?role=candidate (Candidate ID), and /admin with server-side persona validation.'
           ]
         },
         {
-          title: 'Asynchronous Centralized Email Notification Subsystem',
+          title: 'Asynchronous 16-Template Email Subsystem & Ballot Secrecy',
           icon: 'FiMail',
           details: [
-            'Powered by Spring Boot Mail and Gmail SMTP over TLS 587 with Google App Passwords.',
-            'Dispatches responsive HTML onboarding notifications with auto-generated Voter/Candidate IDs asynchronously via CompletableFuture without blocking DB transactions.',
-            'Supports 30-second cryptographic OTP verification and 1-minute password reset recovery tokens.'
+            'Powered by Spring Boot Mail, 16 Thymeleaf responsive HTML templates, and Gmail SMTP (TLS 587) with Google App Passwords.',
+            'Delivers 15 distinct notification events asynchronously via CompletableFuture.runAsync() without blocking database transactions.',
+            'Ballot secrecy: vote confirmation notifications confirm successful submission with timestamp and election ID, preserving complete candidate choice secrecy (zero candidate choice exposed).'
           ]
         },
         {
-          title: 'Tamper-Resistant Cryptographic Auditing & Cloud Deployment',
+          title: 'Docker Containerization & Multi-Cloud Production Topology',
           icon: 'FiServer',
           details: [
-            'High-throughput JPA audit logger writes an immutable ledger capturing actor IDs, IP context, timestamps, and action descriptions into dedicated audit tables.',
-            'Containerized with a multi-stage Docker build (Maven build + lightweight Eclipse Temurin 21 JRE runtime) deployed on Render.',
-            'Production React 19 frontend hosted on Vercel with SPA refresh routing guards and Zustand persistent hydration.'
+            'Optimized multi-stage Dockerfile: Maven 3.9.6 build stage + lightweight Eclipse Temurin 21 JRE runtime for minimal attack surface.',
+            'Backend deployed on Render with managed PostgreSQL; frontend SPA deployed on Vercel with SPA refresh routing guards (/* -> index.html).',
+            'Full automated quality verification: 18 JUnit 5 integration tests passing (0 failures, BUILD SUCCESS), oxlint clean, and Postman collection with 17 pre-configured requests.'
           ]
         }
       ]
