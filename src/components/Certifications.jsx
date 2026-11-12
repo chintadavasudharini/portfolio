@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { FiAward, FiExternalLink } from 'react-icons/fi';
-import { FaAws, FaRedhat, FaDatabase } from 'react-icons/fa';
+import { FaAws, FaRedhat, FaDatabase, FaPython, FaJs, FaReact, FaChartBar, FaBrain } from 'react-icons/fa';
 
 const certifications = [
   {
@@ -53,6 +53,66 @@ const certifications = [
     link: 'https://catalog-education.oracle.com/ords/certview/sharebadge?id=A9FF4E7AC3EB7183DA737879CE43D2B029F86B47F97D6F599205DCAD2D5D168B',
     badge: 'Foundations',
   },
+  {
+    title: 'ReactJS for Beginners',
+    issuer: 'Simplilearn SkillUP',
+    date: 'Oct 2026',
+    icon: FaReact,
+    iconColor: '#61dafb',
+    description: 'Mastered core ReactJS concepts including component architecture, state and props management, hooks, and building responsive single-page applications. Certificate ID: 10859709.',
+    gradient: 'from-cyan-500/15 to-blue-500/5',
+    border: 'border-cyan-500/20',
+    link: 'https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI1MjUiLCJjZXJ0aWZpY2F0ZV91cmwiOiJodHRwczpcL1wvY2VydGlmaWNhdGVzLnNpbXBsaWNkbi5uZXRcL3NoYXJlXC8xMDg1OTcwOS5wbmcifQ',
+    badge: 'Frontend',
+  },
+  {
+    title: 'Machine Learning Using Python',
+    issuer: 'Simplilearn SkillUP',
+    date: 'Oct 2026',
+    icon: FaBrain,
+    iconColor: '#a855f7',
+    description: 'Completed comprehensive training on supervised and unsupervised learning, regression, classification, and model evaluation workflows in Python. Certificate ID: 10852918.',
+    gradient: 'from-purple-500/15 to-pink-500/5',
+    border: 'border-purple-500/20',
+    link: 'https://certificates.simplicdn.net/share/10852918.pdf',
+    badge: 'AI & ML',
+  },
+  {
+    title: 'JavaScript for Beginners',
+    issuer: 'Simplilearn SkillUP',
+    date: 'Oct 2026',
+    icon: FaJs,
+    iconColor: '#f7df1e',
+    description: 'Built strong proficiency in core JavaScript programming, DOM manipulation, asynchronous execution, ES6+ syntax, and modern web interactivity. Certificate ID: 10843634.',
+    gradient: 'from-yellow-500/15 to-amber-500/5',
+    border: 'border-yellow-500/20',
+    link: 'https://certificates.simplicdn.net/share/10843634.pdf',
+    badge: 'Web Dev',
+  },
+  {
+    title: 'Data Structures & Algorithms in Python',
+    issuer: 'Simplilearn SkillUP',
+    date: 'Oct 2026',
+    icon: FaPython,
+    iconColor: '#3776ab',
+    description: 'Strengthened algorithmic problem-solving covering trees, graphs, sorting, searching, dynamic programming, and time-space complexity in Python. Certificate ID: 10841697.',
+    gradient: 'from-blue-500/15 to-indigo-500/5',
+    border: 'border-blue-500/20',
+    link: 'https://certificates.simplicdn.net/share/10841697.pdf',
+    badge: 'DSA',
+  },
+  {
+    title: 'Statistics for Data Science',
+    issuer: 'Simplilearn SkillUP',
+    date: 'Oct 2026',
+    icon: FaChartBar,
+    iconColor: '#10b981',
+    description: 'Gained foundational mastery in probability distributions, hypothesis testing, descriptive and inferential statistics for data-driven analysis. Certificate ID: 10833437.',
+    gradient: 'from-emerald-500/15 to-teal-500/5',
+    border: 'border-emerald-500/20',
+    link: 'https://certificates.simplicdn.net/share/10833437.pdf',
+    badge: 'Data Science',
+  },
 ];
 
 export default function Certifications() {
@@ -77,7 +137,7 @@ export default function Certifications() {
         </motion.div>
 
         {/* Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {certifications.map((cert, i) => {
             const Icon = cert.icon;
             return (

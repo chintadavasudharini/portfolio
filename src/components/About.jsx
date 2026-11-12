@@ -82,7 +82,7 @@ export default function About() {
               {[
                 { value: '2+', label: 'Internships' },
                 { value: '11+', label: 'Projects' },
-                { value: '4+', label: 'Certs' },
+                { value: '9+', label: 'Certs' },
               ].map(s => (
                 <div key={s.label} className="glass-card p-4 text-center">
                   <p className="gradient-text font-bold text-2xl font-['Space_Grotesk']">{s.value}</p>
