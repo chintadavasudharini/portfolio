@@ -165,7 +165,7 @@ export default function ProjectDetailsModal({ project, isOpen, onClose }) {
                         aria-label="Read Technical Article"
                       >
                         <Icons.FiBookOpen size={16} />
-                        LinkedIn Architecture Article
+                        LinkedIn Article
                       </a>
                     )}
                     {project.apiDocs && (
