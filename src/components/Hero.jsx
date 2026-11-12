@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { FiArrowDown, FiDownload, FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
 import { SiHackerrank, SiLeetcode } from 'react-icons/si';
 
-const TYPING_ROLES = ['AI-ML Enthusiast', 'Data Science Explorer', 'Python Full Stack Developer', 'AWS Certified Cloud Practitioner'];
+const TYPING_ROLES = ['Software Developer', 'AI/ML & GenAI Enthusiast', 'Data Science Explorer', 'Python Full-Stack Developer', 'AWS Certified Cloud Practitioner'];
 
 import { useEffect, useState } from 'react';
 
@@ -100,8 +100,7 @@ export default function Hero({ onOpenResume }) {
           transition={{ delay: 0.55 }}
           className="text-[var(--text-muted)] text-base md:text-lg max-w-xl mx-auto mb-10 leading-relaxed"
         >
-          CSE graduate pursuing M.Tech in AI & Data Science at KL University,
-          crafting scalable web applications, cloud-native architectures, and intelligent ML systems.
+          Computer Science graduate currently pursuing an M.Tech in Artificial Intelligence & Data Science at KL University. Passionate about Artificial Intelligence, Machine Learning, and Data Science, with an interest in building intelligent applications, developing scalable Python full-stack solutions, and creating software that solves real-world problems.
         </motion.p>
 
         {/* CTA row */}

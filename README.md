@@ -2,7 +2,7 @@
   
 # 🚀 Chintada Vasudharini | Personal Portfolio
 
-**A high-performance, theme-aware professional portfolio built with modern React.**
+**Software Development · AI/ML · Data Science · Python Full-Stack · AWS**
 
 [![React](https://img.shields.io/badge/React-19.0-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-6.0-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
@@ -16,6 +16,18 @@
 </div>
 
 <br />
+
+## 👩‍💻 About Me
+
+I'm a Computer Science graduate currently pursuing my M.Tech in Artificial Intelligence and Data Science at KL University.
+
+I have hands-on experience with Python, Java, SQL, and full-stack development, building web applications and RESTful APIs using Flask, Spring Boot, React.js, MySQL, and PostgreSQL.
+
+My interests also include Artificial Intelligence, Machine Learning, Deep Learning, and Data Science, with a focus on data preprocessing, exploratory data analysis (EDA), feature engineering, statistical modeling, and predictive modeling.
+
+I'm exploring Generative AI, Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), and Natural Language Processing (NLP) to understand how intelligent, data-driven applications can solve real-world problems.
+
+I enjoy building practical projects, learning new technologies, and continuously improving my skills as a software developer and AI enthusiast.
 
 ## 📖 Overview
 

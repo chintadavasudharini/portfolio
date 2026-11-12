@@ -4,10 +4,10 @@ import { useRef } from 'react';
 import { FiCode, FiCloud, FiCpu, FiBarChart2 } from 'react-icons/fi';
 
 const highlights = [
-  { icon: FiCpu,        label: 'AI & ML',      desc: 'NLP · Deep Learning · Hugging Face'    },
-  { icon: FiBarChart2,  label: 'Data Science', desc: 'Cleaning · Preprocessing · EDA · Analytics'  },
-  { icon: FiCode,       label: 'Full-Stack',   desc: 'Python · Flask · REST APIs · React'   },
-  { icon: FiCloud,      label: 'AWS Cloud',    desc: 'S3 · EC2 · Lambda · Deployment'        },
+  { icon: FiCpu,        label: 'AI & ML',      desc: 'GenAI · LLMs · RAG · NLP · Deep Learning' },
+  { icon: FiBarChart2,  label: 'Data Science', desc: 'Preprocessing · EDA · Feature Eng. · Modeling' },
+  { icon: FiCode,       label: 'Full-Stack',   desc: 'Python · Flask · Spring Boot · React.js' },
+  { icon: FiCloud,      label: 'AWS Cloud',    desc: 'S3 · EC2 · Lambda · Deployment' },
 ];
 
 function Card({ icon: Icon, label, desc, delay }) {
@@ -101,13 +101,22 @@ export default function About() {
             <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-1 font-['Space_Grotesk']">
               Chintada Vasudharini
             </h3>
-            <p className="gradient-text font-semibold text-sm mb-5">AI-ML · DataScience · Python Full Stack · AWS</p>
+            <p className="gradient-text font-semibold text-sm mb-5">Software Development · AI/ML · Data Science · Python Full-Stack · AWS</p>
 
             <p className="text-[var(--text-muted)] leading-relaxed mb-4">
-              I'm a Computer Science graduate currently pursuing an M.Tech in Artificial Intelligence and Data Science at KL University, with hands-on experience in Python, Java, SQL, Machine Learning, Data Science, and Full-Stack Development.
+              I'm a Computer Science graduate currently pursuing my M.Tech in Artificial Intelligence and Data Science at KL University.
+            </p>
+            <p className="text-[var(--text-muted)] leading-relaxed mb-4">
+              I have hands-on experience with Python, Java, SQL, and full-stack development, building web applications and RESTful APIs using Flask, Spring Boot, React.js, MySQL, and PostgreSQL.
+            </p>
+            <p className="text-[var(--text-muted)] leading-relaxed mb-4">
+              My interests also include Artificial Intelligence, Machine Learning, Deep Learning, and Data Science, with a focus on data preprocessing, exploratory data analysis (EDA), feature engineering, statistical modeling, and predictive modeling.
+            </p>
+            <p className="text-[var(--text-muted)] leading-relaxed mb-4">
+              I'm exploring Generative AI, Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), and Natural Language Processing (NLP) to understand how intelligent, data-driven applications can solve real-world problems.
             </p>
             <p className="text-[var(--text-muted)] leading-relaxed mb-8">
-              I specialize in building scalable web applications and RESTful APIs using Flask, Spring Boot, React, MySQL, and PostgreSQL, backed by cloud architectures on AWS, Docker, and Git. Skilled in data preprocessing, exploratory data analysis (EDA), feature engineering, statistical modeling, and NLP to engineer robust, data-driven solutions.
+              I enjoy building practical projects, learning new technologies, and continuously improving my skills as a software developer and AI enthusiast.
             </p>
 
             {/* Highlight cards */}
