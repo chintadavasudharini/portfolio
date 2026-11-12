@@ -14,7 +14,7 @@ const education = [
     scoreLabel: 'CGPA',
     icon: FaGraduationCap,
     color: 'from-violet-500 to-indigo-600',
-    tags: ['AI & Machine Learning', 'Data Science', 'Advanced Algorithms', 'Deep Learning'],
+    tags: ['Artificial Intelligence', 'Data Science', 'Machine Learning', 'Deep Learning'],
   },
   {
     degree: 'Bachelor of Technology (B.Tech) – Computer Science and Engineering',
@@ -25,7 +25,7 @@ const education = [
     scoreLabel: 'CGPA',
     icon: FaGraduationCap,
     color: 'from-purple-500 to-violet-600',
-    tags: ['AIML Specialization', 'Data Science', 'AWS Cloud', 'Full-Stack Dev'],
+    tags: ['AIML Specialization', 'AWS Cloud'],
   },
   {
     degree: 'Intermediate (MPC) — Class XII',
