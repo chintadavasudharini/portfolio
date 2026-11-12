@@ -8,7 +8,7 @@ const experiences = [
     role: 'Python Full Stack Intern',
     company: 'Codegnan IT Solutions',
     location: 'Vijayawada, AP',
-    period: 'Sep 2024 – Aug 2025',
+    period: 'Sep 2024 – Sep 2025',
     type: 'Internship',
     color: 'from-purple-500 to-violet-600',
     highlights: [

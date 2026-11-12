@@ -124,14 +124,6 @@ const skillGroups = [
       { name: 'HackerRank', icon: SiHackerrank, color: '#2ec866', href: 'https://www.hackerrank.com/profile/Vasudharini_21' },
     ],
   },
-  {
-    category: 'Tools & IDEs',
-    color: 'from-lime-500/20 to-lime-500/5',
-    border: 'border-lime-500/20',
-    skills: [
-      { name: 'PyCharm', icon: SiPycharm, color: '#21d789' },
-    ],
-  },
 ];
 
 function SkillIcon({ name, icon: Icon, color, href }) {
@@ -214,6 +206,7 @@ export default function Skills() {
           <div className="flex flex-wrap gap-2">
             {[
               { name: 'VS Code', icon: FaCode },
+              { name: 'PyCharm', icon: SiPycharm },
               { name: 'Git', icon: FaGitAlt },
               { name: 'GitHub', icon: FaGithub },
               { name: 'Docker', icon: FaDocker },
