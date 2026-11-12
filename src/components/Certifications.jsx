@@ -62,7 +62,7 @@ const certifications = [
     description: 'Mastered core ReactJS concepts including component architecture, state and props management, hooks, and building responsive single-page applications. Certificate ID: 10859709.',
     gradient: 'from-cyan-500/15 to-blue-500/5',
     border: 'border-cyan-500/20',
-    certId: '10859709',
+    link: '/certificates/ReactJS.pdf',
     badge: 'Frontend',
   },
   {
@@ -74,7 +74,7 @@ const certifications = [
     description: 'Completed comprehensive training on supervised and unsupervised learning, regression, classification, and model evaluation workflows in Python. Certificate ID: 10852918.',
     gradient: 'from-purple-500/15 to-pink-500/5',
     border: 'border-purple-500/20',
-    certId: '10852918',
+    link: '/certificates/ML_using_Python.pdf',
     badge: 'AI & ML',
   },
   {
@@ -86,7 +86,7 @@ const certifications = [
     description: 'Built strong proficiency in core JavaScript programming, DOM manipulation, asynchronous execution, ES6+ syntax, and modern web interactivity. Certificate ID: 10843634.',
     gradient: 'from-yellow-500/15 to-amber-500/5',
     border: 'border-yellow-500/20',
-    certId: '10843634',
+    link: '/certificates/JavaScript.pdf',
     badge: 'Web Dev',
   },
   {
@@ -98,7 +98,7 @@ const certifications = [
     description: 'Strengthened algorithmic problem-solving covering trees, graphs, sorting, searching, dynamic programming, and time-space complexity in Python. Certificate ID: 10841697.',
     gradient: 'from-blue-500/15 to-indigo-500/5',
     border: 'border-blue-500/20',
-    certId: '10841697',
+    link: '/certificates/DSA_in_Python.pdf',
     badge: 'DSA',
   },
   {
@@ -110,7 +110,7 @@ const certifications = [
     description: 'Gained foundational mastery in probability distributions, hypothesis testing, descriptive and inferential statistics for data-driven analysis. Certificate ID: 10833437.',
     gradient: 'from-emerald-500/15 to-teal-500/5',
     border: 'border-emerald-500/20',
-    certId: '10833437',
+    link: '/certificates/Statistics_for_Data_Science.pdf',
     badge: 'Data Science',
   },
 ];
