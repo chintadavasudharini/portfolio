@@ -37,6 +37,7 @@ const skillGroups = [
       { name: 'Deep Learning',    icon: FiCpu, color: '#ec4899' },
       { name: 'NLP',              icon: FiCpu, color: '#06b6d4' },
       { name: 'Generative AI',    icon: FiZap, color: '#f59e0b' },
+      { name: 'LLM',              icon: FiCpu, color: '#8b5cf6' },
       { name: 'RAG',              icon: FiCpu, color: '#10b981' },
       { name: 'Agentic AI',       icon: FiZap, color: '#38bdf8' },
     ],
