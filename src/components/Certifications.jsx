@@ -62,7 +62,7 @@ const certifications = [
     description: 'Mastered core ReactJS concepts including component architecture, state and props management, hooks, and building responsive single-page applications. Certificate ID: 10859709.',
     gradient: 'from-cyan-500/15 to-blue-500/5',
     border: 'border-cyan-500/20',
-    link: 'https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI1MjUiLCJjZXJ0aWZpY2F0ZV91cmwiOiJodHRwczpcL1wvY2VydGlmaWNhdGVzLnNpbXBsaWNkbi5uZXRcL3NoYXJlXC8xMDg1OTcwOS5wbmcifQ',
+    certId: '10859709',
     badge: 'Frontend',
   },
   {
@@ -74,7 +74,7 @@ const certifications = [
     description: 'Completed comprehensive training on supervised and unsupervised learning, regression, classification, and model evaluation workflows in Python. Certificate ID: 10852918.',
     gradient: 'from-purple-500/15 to-pink-500/5',
     border: 'border-purple-500/20',
-    link: 'https://certificates.simplicdn.net/share/10852918.pdf',
+    certId: '10852918',
     badge: 'AI & ML',
   },
   {
@@ -86,7 +86,7 @@ const certifications = [
     description: 'Built strong proficiency in core JavaScript programming, DOM manipulation, asynchronous execution, ES6+ syntax, and modern web interactivity. Certificate ID: 10843634.',
     gradient: 'from-yellow-500/15 to-amber-500/5',
     border: 'border-yellow-500/20',
-    link: 'https://certificates.simplicdn.net/share/10843634.pdf',
+    certId: '10843634',
     badge: 'Web Dev',
   },
   {
@@ -98,7 +98,7 @@ const certifications = [
     description: 'Strengthened algorithmic problem-solving covering trees, graphs, sorting, searching, dynamic programming, and time-space complexity in Python. Certificate ID: 10841697.',
     gradient: 'from-blue-500/15 to-indigo-500/5',
     border: 'border-blue-500/20',
-    link: 'https://certificates.simplicdn.net/share/10841697.pdf',
+    certId: '10841697',
     badge: 'DSA',
   },
   {
@@ -110,7 +110,7 @@ const certifications = [
     description: 'Gained foundational mastery in probability distributions, hypothesis testing, descriptive and inferential statistics for data-driven analysis. Certificate ID: 10833437.',
     gradient: 'from-emerald-500/15 to-teal-500/5',
     border: 'border-emerald-500/20',
-    link: 'https://certificates.simplicdn.net/share/10833437.pdf',
+    certId: '10833437',
     badge: 'Data Science',
   },
 ];
@@ -162,9 +162,15 @@ export default function Certifications() {
                 <h3 className="font-['Space_Grotesk'] font-bold text-[var(--text-primary)] text-sm leading-snug mb-1 min-h-[40px]">{cert.title}</h3>
                 <p className="text-[var(--text-muted)] text-xs font-medium mb-3">{cert.issuer}</p>
                 <p className="text-[var(--text-muted)] text-xs leading-relaxed flex-1 opacity-80">{cert.description}</p>
-                <a href={cert.link} target="_blank" rel="noopener noreferrer" className="mt-4 flex items-center gap-1.5 text-xs text-[var(--accent-purple)] hover:text-[var(--accent-cyan)] transition-colors group">
-                  <FiAward size={12} /> View Credential <FiExternalLink size={11} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                </a>
+                {cert.link ? (
+                  <a href={cert.link} target="_blank" rel="noopener noreferrer" className="mt-4 flex items-center gap-1.5 text-xs text-[var(--accent-purple)] hover:text-[var(--accent-cyan)] transition-colors group">
+                    <FiAward size={12} /> View Credential <FiExternalLink size={11} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </a>
+                ) : (
+                  <span className="mt-4 flex items-center gap-1.5 text-xs text-[var(--text-muted)] opacity-80">
+                    <FiAward size={12} /> Verified · ID: {cert.certId}
+                  </span>
+                )}
               </motion.div>
             );
           })}
