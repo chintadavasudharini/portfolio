@@ -16,8 +16,8 @@ const contactLinks = [
   {
     icon: FiLinkedin,
     label: 'LinkedIn',
-    value: 'chintada-vasudharini-nov21',
-    href: 'https://www.linkedin.com/in/chintada-vasudharini-nov21/',
+    value: 'chintada-vasudharini',
+    href: 'https://www.linkedin.com/in/chintada-vasudharini/',
     color: 'text-blue-500',
     bg: 'rgba(59, 130, 246, 0.08)',
   },

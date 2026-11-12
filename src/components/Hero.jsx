@@ -129,7 +129,7 @@ export default function Hero({ onOpenResume }) {
         >
           {[
             { icon: FiGithub, href: 'https://github.com/chintadavasudharini', label: 'GitHub' },
-            { icon: FiLinkedin, href: 'https://www.linkedin.com/in/chintada-vasudharini-nov21/', label: 'LinkedIn' },
+            { icon: FiLinkedin, href: 'https://www.linkedin.com/in/chintada-vasudharini/', label: 'LinkedIn' },
             { icon: FiMail, href: 'mailto:chintadavasudharini@gmail.com', label: 'Email' },
           ].map(({ icon: Icon, href, label }) => (
             <a

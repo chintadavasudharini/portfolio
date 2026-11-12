@@ -13,7 +13,7 @@ const links = [
 
 const socials = [
   { icon: FiGithub,   href: 'https://github.com/chintadavasudharini',          label: 'GitHub'   },
-  { icon: FiLinkedin, href: 'https://www.linkedin.com/in/chintada-vasudharini-nov21/',      label: 'LinkedIn' },
+  { icon: FiLinkedin, href: 'https://www.linkedin.com/in/chintada-vasudharini/',      label: 'LinkedIn' },
   { icon: SiLeetcode, href: 'https://leetcode.com/u/chintadavasudharini/', label: 'LeetCode' },
   { icon: SiCodechef, href: 'https://www.codechef.com/users/vasudharini',  label: 'CodeChef' },
   { icon: SiHackerrank, href: 'https://www.hackerrank.com/profile/Vasudharini_21', label: 'HackerRank' },
