@@ -10,7 +10,7 @@ import {
   SiFlask, SiMysql, SiMongodb, SiStreamlit, SiJupyter, SiPostman,
   SiHackerrank, SiLeetcode, SiCodechef, SiVercel, SiRender, SiTensorflow,
   SiScikitlearn, SiPandas, SiNumpy, SiPytorch, SiGooglecolab, SiCplusplus,
-  SiSpringboot, SiPostgresql
+  SiSpringboot, SiPostgresql, SiDjango, SiPycharm
 } from 'react-icons/si';
 import { FiCpu, FiCode as FiCodeIcon, FiZap } from 'react-icons/fi';
 import { DiJava } from 'react-icons/di';
@@ -37,6 +37,8 @@ const skillGroups = [
       { name: 'Deep Learning',    icon: FiCpu, color: '#ec4899' },
       { name: 'NLP',              icon: FiCpu, color: '#06b6d4' },
       { name: 'Generative AI',    icon: FiZap, color: '#f59e0b' },
+      { name: 'RAG',              icon: FiCpu, color: '#10b981' },
+      { name: 'Agentic AI',       icon: FiZap, color: '#38bdf8' },
     ],
   },
   {
@@ -86,6 +88,7 @@ const skillGroups = [
       { name: 'Bootstrap',    icon: FaBootstrap,    color: '#7952b3' },
       { name: 'React.js',     icon: FaReact,        color: '#61dafb' },
       { name: 'Flask',        icon: SiFlask,        color: '#94a3b8' },
+      { name: 'Django',       icon: SiDjango,       color: '#44b78b' },
       { name: 'Spring Boot',  icon: SiSpringboot,   color: '#6db33f' },
       { name: 'REST APIs',    icon: FiCpu,          color: '#8b5cf6' },
     ],
@@ -118,6 +121,14 @@ const skillGroups = [
       { name: 'LeetCode',   icon: SiLeetcode,   color: '#ffa116', href: 'https://leetcode.com/u/chintadavasudharini/' },
       { name: 'CodeChef',   icon: SiCodechef,   color: '#5B4638', href: 'https://www.codechef.com/users/vasudharini' },
       { name: 'HackerRank', icon: SiHackerrank, color: '#2ec866', href: 'https://www.hackerrank.com/profile/Vasudharini_21' },
+    ],
+  },
+  {
+    category: 'Tools & IDEs',
+    color: 'from-lime-500/20 to-lime-500/5',
+    border: 'border-lime-500/20',
+    skills: [
+      { name: 'PyCharm', icon: SiPycharm, color: '#21d789' },
     ],
   },
 ];
